@@ -80,8 +80,14 @@ public class UsuarioDaoOracle implements UsuarioDao {
 
 	@Override
 	public void cadastrar(UsuarioTo usuarioTo) throws SQLException, Exception {
-		// TODO Auto-generated method stub
-
+		PreparedStatement stmt = conexao.prepareStatement("");
+		
+		stmt.setInt(1,usuarioTo.getId());
+		stmt.setString(2, usuarioTo.getEmail());
+		stmt.setString(3, usuarioTo.getNome());
+		
+		stmt.executeUpdate();
+		
 	}
 
 }

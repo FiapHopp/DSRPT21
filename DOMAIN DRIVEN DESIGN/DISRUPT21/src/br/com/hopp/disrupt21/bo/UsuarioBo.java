@@ -23,4 +23,8 @@ public class UsuarioBo {
 	public List <UsuarioTo> lista () throws SQLException, Exception{
 		return usuarioDaoOracle.lista();
 	}
+	
+	public void cadastrar (UsuarioTo usuarioTo) throws SQLException, Exception{
+		usuarioDaoOracle.cadastrar(usuarioTo);
+	}
 }
