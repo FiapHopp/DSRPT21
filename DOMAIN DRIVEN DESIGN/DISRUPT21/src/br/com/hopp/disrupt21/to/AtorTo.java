@@ -1,10 +1,10 @@
 package br.com.hopp.disrupt21.to;
 
 public class AtorTo {
-	
+	private int id;
 	private String nomeAtor;
 	private String localidade;
-	private int idadeLocalidade;
+	private String dataNascimento;
 	
 	
 	
@@ -12,11 +12,11 @@ public class AtorTo {
 		super();
 	}
 	
-	public AtorTo(String nomeAtor, String localidade, int idadeLocalidade) {
-		super();
+	public AtorTo(int id,String nomeAtor, String localidade, String dataNascimento) {
+		this.id=id;
 		this.nomeAtor = nomeAtor;
 		this.localidade = localidade;
-		this.idadeLocalidade = idadeLocalidade;
+		this.dataNascimento = dataNascimento;
 	}
 	
 	public AtorTo(int id) {
@@ -35,10 +35,18 @@ public class AtorTo {
 	public void setLocalidade(String localidade) {
 		this.localidade = localidade;
 	}
-	public int getIdadeLocalidade() {
-		return idadeLocalidade;
+	public String getDataNascimento() {
+		return dataNascimento;
 	}
-	public void setIdadeLocalidade(int idadeLocalidade) {
-		this.idadeLocalidade = idadeLocalidade;
+	public void setDataNascimento(String dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 }

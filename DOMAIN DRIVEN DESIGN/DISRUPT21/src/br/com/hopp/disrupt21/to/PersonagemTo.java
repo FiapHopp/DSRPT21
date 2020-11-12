@@ -9,7 +9,7 @@ public class PersonagemTo {
 	private String resumo;
 	
 	public PersonagemTo(int id,String nomePersonagem, int idadePersonagem, AtorTo ator,String resumo) {
-		this.setId(id);
+		this.id= id;
 		this.nomePersonagem = nomePersonagem;
 		this.idadePersonagem = idadePersonagem;
 		this.ator = ator;

@@ -19,7 +19,7 @@ public class PerguntasTo {
 
 	public PerguntasTo(int id, String pergunta, String resposta1, String resposta2, String resposta3, String resposta4,
 			String resposta5, String respostaCerta, String valorDaPergunta) {
-		super();
+		
 		this.id = id;
 		this.pergunta = pergunta;
 		this.resposta1 = resposta1;

@@ -3,7 +3,7 @@ package br.com.hopp.disrupt21.to;
 public class LocalAcontecimentoTo {
 	
 	private int id;
-	private String nome;
+	private String nomeLocalAcontecimento;
 	private String resumo;
 	
 	
@@ -12,7 +12,7 @@ public class LocalAcontecimentoTo {
 	
 	public LocalAcontecimentoTo(int id, String nome, String resumo) {
 		this.id = id;
-		this.nome = nome;
+		this.nomeLocalAcontecimento = nome;
 		this.resumo = resumo;
 	}
 	
@@ -23,10 +23,10 @@ public class LocalAcontecimentoTo {
 		this.id = id;
 	}
 	public String getNome() {
-		return nome;
+		return nomeLocalAcontecimento;
 	}
 	public void setNome(String nome) {
-		this.nome = nome;
+		this.nomeLocalAcontecimento = nome;
 	}
 	public String getResumo() {
 		return resumo;

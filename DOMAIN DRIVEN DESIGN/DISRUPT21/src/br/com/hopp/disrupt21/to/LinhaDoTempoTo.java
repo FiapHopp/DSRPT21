@@ -16,7 +16,7 @@ public class LinhaDoTempoTo {
 
 	public LinhaDoTempoTo(int id,String titulo, String acontecimento, int anoAcontecimento,
 			TempoAcontecimentoTo tempoAcontecimento, LocalAcontecimentoTo localAcontecimento) {
-		this.setId(id);
+		this.id = id;
 		this.titulo = titulo;
 		this.acontecimento = acontecimento;
 		this.anoAcontecimento = anoAcontecimento;
