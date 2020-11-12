@@ -2,13 +2,14 @@ package br.com.hopp.disrupt21.to;
 
 public class PersonagemTo {
 	
+	private int id;
 	private String nomePersonagem;
 	private int idadePersonagem;
 	private AtorTo ator;
 	private String resumo;
 	
-	public PersonagemTo(String nomePersonagem, int idadePersonagem, AtorTo ator,String resumo) {
-		super();
+	public PersonagemTo(int id,String nomePersonagem, int idadePersonagem, AtorTo ator,String resumo) {
+		this.setId(id);
 		this.nomePersonagem = nomePersonagem;
 		this.idadePersonagem = idadePersonagem;
 		this.ator = ator;
@@ -49,6 +50,14 @@ public class PersonagemTo {
 
 	public void setResumo(String resumo) {
 		this.resumo = resumo;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 	

@@ -1,6 +1,7 @@
 package br.com.hopp.disrupt21.to;
 
 public class UsuarioTo {
+	
 	private int id;
 	private String nome;
 	private String email;

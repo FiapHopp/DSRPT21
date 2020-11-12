@@ -19,6 +19,10 @@ public class AtorTo {
 		this.idadeLocalidade = idadeLocalidade;
 	}
 	
+	public AtorTo(int id) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getNomeAtor() {
 		return nomeAtor;
 	}
