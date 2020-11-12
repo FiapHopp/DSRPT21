@@ -8,16 +8,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.hopp.disrupt21.connection.ConnectionManager;
-import br.com.hopp.disrupt21.dao.UsuarioDao;
-import br.com.hopp.disrupt21.to.UsuarioTo;
+import br.com.hopp.disrupt21.dao.QuizDao;
+import br.com.hopp.disrupt21.to.QuizTo;
 
-public class UsuarioDaoOracle implements UsuarioDao {
+public class QuizDaoOracle implements QuizDao {
 	
 	private Connection conexao;
 	
-	public UsuarioDaoOracle () throws Exception {
-		this.conexao= ConnectionManager.getInstance().getConnection();
-
+	public QuizDaoOracle()throws Exception{
+		this.conexao = ConnectionManager.getInstance().getConnection();
 	}
 	
 	@Override
@@ -27,24 +26,22 @@ public class UsuarioDaoOracle implements UsuarioDao {
 
 	}
 	
-	private UsuarioTo parse(ResultSet resultado) throws SQLException{
+	private QuizTo parse(ResultSet resultado) throws SQLException{
 		int id = resultado.getInt("");
-		String nome = resultado.getString("");
-		String email = resultado.getString("");
+		String titulo = resultado.getString("");
 		
-		UsuarioTo usuarioTo = new UsuarioTo(id, nome, email);
+		QuizTo quizTo =  new QuizTo(id, titulo);
 		
-		return usuarioTo;
+		return quizTo;
 	}
 	
-	
 	@Override
-	public List<UsuarioTo> lista() throws SQLException, Exception {
+	public List<QuizTo> lista() throws SQLException, Exception {
 		PreparedStatement stmt = conexao.prepareStatement("");
 		
 		ResultSet resultado = stmt.executeQuery();
 		
-		List<UsuarioTo> lista = new ArrayList<UsuarioTo>();
+		List<QuizTo> lista = new ArrayList<QuizTo>();
 		while (resultado.next()) {
 			lista.add(parse(resultado));			
 		}
@@ -52,13 +49,13 @@ public class UsuarioDaoOracle implements UsuarioDao {
 	}
 
 	@Override
-	public void atualizar(UsuarioTo usuarioTo) throws SQLException, Exception {
+	public void atualizar(QuizTo quizTo) throws SQLException, Exception {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public UsuarioTo pesquisar(int id) throws SQLException, Exception {
+	public QuizTo pesquisar(int id) throws SQLException, Exception {
 		PreparedStatement stmt = conexao.prepareStatement("");
 		
 		stmt.setInt(1, id);
@@ -79,7 +76,7 @@ public class UsuarioDaoOracle implements UsuarioDao {
 	}
 
 	@Override
-	public void cadastrar(UsuarioTo usuarioTo) throws SQLException, Exception {
+	public void cadastrar(QuizTo quizTo) throws SQLException, Exception {
 		// TODO Auto-generated method stub
 
 	}
