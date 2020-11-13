@@ -1,11 +1,13 @@
 package br.com.hopp.disrupt21.to;
 
+import java.util.Date;
+
 public class LinhaDoTempoTo {
 	
 	private int id;
 	private String titulo;
 	private String acontecimento;
-	private int anoAcontecimento;
+	private Date dataAcontecimento;
 	private TempoAcontecimentoTo tempoAcontecimento;
 	private LocalAcontecimentoTo localAcontecimento;
 	
@@ -14,12 +16,12 @@ public class LinhaDoTempoTo {
 		
 	}
 
-	public LinhaDoTempoTo(int id,String titulo, String acontecimento, int anoAcontecimento,
+	public LinhaDoTempoTo(int id,String titulo, String acontecimento, Date dataAcontecimento,
 			TempoAcontecimentoTo tempoAcontecimento, LocalAcontecimentoTo localAcontecimento) {
 		this.id = id;
 		this.titulo = titulo;
 		this.acontecimento = acontecimento;
-		this.anoAcontecimento = anoAcontecimento;
+		this.dataAcontecimento = dataAcontecimento;
 		this.tempoAcontecimento = tempoAcontecimento;
 		this.localAcontecimento = localAcontecimento;
 	}
@@ -36,11 +38,11 @@ public class LinhaDoTempoTo {
 	public void setAcontecimento(String acontecimento) {
 		this.acontecimento = acontecimento;
 	}
-	public int getAnoAcontecimento() {
-		return anoAcontecimento;
+	public Date getDataAcontecimento() {
+		return dataAcontecimento;
 	}
-	public void setAnoAcontecimento(int anoAcontecimento) {
-		this.anoAcontecimento = anoAcontecimento;
+	public void setDataAcontecimento(Date dataAcontecimento) {
+		this.dataAcontecimento = dataAcontecimento;
 	}
 	public TempoAcontecimentoTo getTempoAcontecimento() {
 		return tempoAcontecimento;
