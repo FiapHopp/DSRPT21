@@ -7,15 +7,13 @@ public class PersonagemTo {
 	private int idadePersonagem;
 	private AtorTo ator;
 	private String resumo;
-	private String sexo;
 	
-	public PersonagemTo(int id,String nomePersonagem, int idadePersonagem, AtorTo ator,String resumo,String sexo) {
+	public PersonagemTo(int id,String nomePersonagem, int idadePersonagem, AtorTo ator,String resumo) {
 		this.id= id;
 		this.nomePersonagem = nomePersonagem;
 		this.idadePersonagem = idadePersonagem;
 		this.ator = ator;
 		this.resumo= resumo;
-		this.sexo = sexo;
 	}
 	
 	public PersonagemTo() {
@@ -60,14 +58,6 @@ public class PersonagemTo {
 
 	public void setId(int id) {
 		this.id = id;
-	}
-
-	public String getSexo() {
-		return sexo;
-	}
-
-	public void setSexo(String sexo) {
-		this.sexo = sexo;
 	}
 	
 	

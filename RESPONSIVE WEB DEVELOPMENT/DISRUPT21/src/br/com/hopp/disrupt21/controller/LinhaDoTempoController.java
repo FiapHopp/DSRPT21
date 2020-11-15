@@ -6,8 +6,11 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
+import br.com.hopp.disrupt21.bo.LinhaDoTempoBo;
+import br.com.hopp.disrupt21.to.LinhaDoTempoTo;
 
-@WebServlet(urlPatterns= {"/listaAll","/listar"})
+
+@WebServlet(urlPatterns= {"/linhaDoTempo"})
 public class LinhaDoTempoController extends HttpServlet {
 	
 	private static final long serialVersionUID= 1L;
