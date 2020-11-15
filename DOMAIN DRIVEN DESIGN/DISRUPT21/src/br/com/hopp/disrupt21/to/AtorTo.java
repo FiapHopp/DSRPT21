@@ -6,19 +6,19 @@ public class AtorTo {
 	private String nomeAtor;
 	private String localidade;
 	private String dataNascimento;
-	private char sexo;
+	private String sexo;
 	
 	
 	public AtorTo() {
 		super();
 	}
 	
-	public AtorTo(int id,String nomeAtor, String localidade, String dataNascimento, char sexo) {
+	public AtorTo(int id,String nomeAtor, String localidade, String dataNascimento, String sexo) {
 		this.id=id;
 		this.nomeAtor = nomeAtor;
 		this.localidade = localidade;
 		this.dataNascimento = dataNascimento;
-		this.setSexo(sexo);
+		this.sexo= sexo;
 	}
 	
 	public AtorTo(int id) {
@@ -52,11 +52,11 @@ public class AtorTo {
 		this.id = id;
 	}
 
-	public char getSexo() {
+	public String getSexo() {
 		return sexo;
 	}
 
-	public void setSexo(char sexo) {
+	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
 }

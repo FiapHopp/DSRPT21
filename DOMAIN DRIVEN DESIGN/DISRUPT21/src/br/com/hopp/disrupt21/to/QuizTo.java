@@ -12,8 +12,7 @@ public class QuizTo {
 
 	public QuizTo(int id, String titulo) {
 		this.id = id;
-		this.titulo = titulo;
-		
+		this.titulo = titulo;	
 	}
 	
 	public int getId() {
