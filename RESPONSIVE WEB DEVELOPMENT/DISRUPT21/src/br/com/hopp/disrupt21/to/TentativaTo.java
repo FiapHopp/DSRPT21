@@ -8,7 +8,11 @@ public class TentativaTo {
 	private int idQuiz;
 	private int pontos;
 	private Date dataRegistro;
-		
+	
+	
+	
+	
+	
 	public TentativaTo() {
 	}
 
