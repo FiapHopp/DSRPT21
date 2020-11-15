@@ -6,9 +6,7 @@ public class TempoAcontecimentoTo {
 	private String tempo;
 	
 	
-	public TempoAcontecimentoTo(){
-		
-	}
+	public TempoAcontecimentoTo(){ }
 	
 	public TempoAcontecimentoTo(int id, String tempo) {
 		this.id = id;
