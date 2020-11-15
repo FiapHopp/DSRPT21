@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
-  <display-name>DISRUPT21</display-name>
-  <welcome-file-list>
-    <welcome-file>index.jsp</welcome-file>
-  </welcome-file-list>
-  <error-page>    
-    <error-code>404</error-code>
-    <location>/login.jsp</location>
-	</error-page>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>DISRUPT21</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>LinhaDoTempoController</servlet-name>
+		<servlet-class>br.com.hopp.disrupt21.controller</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>LocalAcontecimentoController</servlet-name>
+		<servlet-class>br.com.hopp.disrupt21.controller</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>PersonagemController</servlet-name>
+		<servlet-class>br.com.hopp.disrupt21.controller</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>QuizController</servlet-name>
+		<servlet-class>br.com.hopp.disrupt21.controller</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UsuarioController</servlet-name>
+		<servlet-class>br.com.hopp.disrupt21.controller</servlet-class>
+	</servlet>
+
 </web-app>
