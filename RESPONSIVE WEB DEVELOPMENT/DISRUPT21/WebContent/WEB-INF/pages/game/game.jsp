@@ -5,10 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Game</title>
+<link rel="stylesheet" href="../../../css/game.css">
 </head>
 <body>
-
-
-	<script src=""></script>
+	<script src="../../../js/game.js"></script>
 </body>
 </html>
