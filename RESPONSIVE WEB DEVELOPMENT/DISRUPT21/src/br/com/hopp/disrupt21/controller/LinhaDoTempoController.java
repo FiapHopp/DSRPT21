@@ -22,7 +22,7 @@ public class LinhaDoTempoController extends HttpServlet {
 	protected void service(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException{
 		
 		switch(request.getRequestURI()) {
-		case "/listaAll":
+		case "/DISRUPT21/listaAll":
 			listaLinhaDoTempo(request,response);
 			break;
 		case "/listar":
@@ -37,19 +37,28 @@ public class LinhaDoTempoController extends HttpServlet {
 			}
 			break;
 		default:
-			response.sendRedirect("");
+			System.out.println("entrou aqui");
 		}
 		
 	}
-
+	
 	private void pesquisarLinhaDoTempo(HttpServletRequest req, HttpServletResponse resp, int idTempo) throws Exception{
-		
-		
+		try {
+			resp.sendRedirect("index.jsp");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	private void listaLinhaDoTempo(HttpServletRequest req, HttpServletResponse resp) {
 		// TODO Auto-generated method stub
-		
+		try {
+			resp.sendRedirect("index.jsp");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 }
