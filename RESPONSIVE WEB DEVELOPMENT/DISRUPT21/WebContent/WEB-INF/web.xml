@@ -27,5 +27,9 @@
 		<servlet-name>UsuarioController</servlet-name>
 		<servlet-class>br.com.hopp.disrupt21.controller</servlet-class>
 	</servlet>
+	<error-page>    
+	    <error-code>404</error-code>
+	    <location>/pages/erro/erro.jsp</location>
+	</error-page>
 
 </web-app>
