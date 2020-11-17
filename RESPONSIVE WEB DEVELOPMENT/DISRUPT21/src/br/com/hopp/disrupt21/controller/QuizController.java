@@ -20,26 +20,28 @@ public class QuizController extends HttpServlet {
 	
 	protected void service(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException{
 		
-		switch(request.getRequestURI()) {
-		case "/listaAll":
-			listaQuiz(request,response);
-			break;
-		case "/listar":
-			pesquisarQuiz(request,response,Integer.parseInt(request.getParameter("")));
-			break;
-		default:
-			response.sendRedirect("");
+		switch (request.getRequestURI()) {
+
+			case "/DISRUPT21/quiz":	
+				quiz(request, response);
+				break;
+			case "/listar":
+				
+				break;
+			default:
+				System.out.println("ENTROU default");
 		}
 		
 	}
 
-	private void pesquisarQuiz(HttpServletRequest req, HttpServletResponse resp, int parseInt) {
-		// TODO Auto-generated method stub
-		
+	public void quiz(HttpServletRequest request, HttpServletResponse response) {
+		try {
+			response.sendRedirect("/DISRUPT21/pages/quiz/quiz.jsp");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+				
 	}
 
-	private void listaQuiz(HttpServletRequest req, HttpServletResponse resp) {
-		// TODO Auto-generated method stub
-		
-	}
 }
