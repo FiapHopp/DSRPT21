@@ -50,8 +50,8 @@
         <img class="index-img" src="./img/bttf-logo.png" alt="logo-index"></img>
       </div>
       <div class="index-buttons">
-        <a href="./pages/personagens/personagens.jsp"><button type="button" class="btn btn-warning btn-lg">Personagem</button></a>
-        <a href="./pages/timeline/timeline.jsp"><button type="button" class="btn btn-warning btn-lg">Timeline</button></a>
+        <a href="/DISRUPT21/personagens"><button type="button" class="btn btn-warning btn-lg">Personagem</button></a>
+        <a href="/DISRUPT21/linhaDoTempo"><button type="button" class="btn btn-warning btn-lg">Timeline</button></a>
       </div>
     </main>
     <div class="background">
