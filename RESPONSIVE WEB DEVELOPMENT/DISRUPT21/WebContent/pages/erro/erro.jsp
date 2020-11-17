@@ -49,6 +49,9 @@
 <!-- Main -->
 <main class="container">
  	<div class="col-12">
+ 		<p class="text-dark">
+			Aconteceu alguma coisa, algo deu errado ):
+		</p>
 		<p class="text-dark">
 			${param.msgStatus}
 		</p>	
