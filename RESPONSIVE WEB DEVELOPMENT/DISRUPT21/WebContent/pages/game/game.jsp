@@ -33,14 +33,14 @@ canvas {
                 <a class="nav-link" href="../../index.jsp">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../personagens/personagens.jsp">Personagens</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../timeline/timeline.jsp">Linha do Tempo</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../quiz/quiz.jsp">Quiz</a>
-              </li>
+				<a class="nav-link" href="/DISRUPT21/personagens">Personagens</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="/DISRUPT21/linhaDoTempo">Linha do Tempo</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="/DISRUPT21/quiz">Quiz</a>
+			  </li>
               <li class="nav-item">
                 <a class="nav-link" href="../about/about.jsp">Sobre o Projeto</a>
               </li>
