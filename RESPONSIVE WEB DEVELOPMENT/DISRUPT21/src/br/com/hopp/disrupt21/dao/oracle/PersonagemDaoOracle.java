@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import br.com.hopp.disrupt21.connection.ConnectionManager;
@@ -28,15 +29,16 @@ public class PersonagemDaoOracle implements PersonagemDao {
 	}
 
 	private PersonagemTo parse(ResultSet resultado)throws SQLException{
-		int id = resultado.getInt("");
-		int idadePersonagem = resultado.getInt("");
-		int idAtor = resultado.getInt("");
-		String nomePersonagem = resultado.getString("");
-		String resumo = resultado.getString("");
+		int id = resultado.getInt("ID_PERSONAGEM");
+		String idadePersonagem = resultado.getString("DT_NASCIMENTO");
+		//int idAtor = resultado.getInt("");
+		String nomePersonagem = resultado.getString("NM_PERSONAGEM");
+		String resumo = resultado.getString("RESUMO");
+		String sexo = resultado.getNString("SEXO");
 		
-		AtorTo atorTo = new AtorTo(idAtor);
+		//AtorTo atorTo = new AtorTo(idAtor);
 		
-		PersonagemTo personagemTo = new PersonagemTo(id, nomePersonagem, idadePersonagem, atorTo, resumo);
+		PersonagemTo personagemTo = new PersonagemTo(id, nomePersonagem, idadePersonagem, resumo,sexo);
 		
 		return personagemTo;
 		
@@ -44,7 +46,7 @@ public class PersonagemDaoOracle implements PersonagemDao {
 
 	@Override
 	public List<PersonagemTo> lista() throws SQLException, Exception {
-		PreparedStatement stmt = conexao.prepareStatement("");
+		PreparedStatement stmt = conexao.prepareStatement("Select * from T_PERSONAGEM");
 		
 		ResultSet resultado = stmt.executeQuery();
 		
