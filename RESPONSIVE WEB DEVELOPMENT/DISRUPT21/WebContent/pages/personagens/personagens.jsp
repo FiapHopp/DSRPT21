@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-       
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!DOCTYPE html>
 <html>
@@ -50,23 +49,26 @@
 <section class="personagem-tabs">
   <img src="../../img/personagens-cover.jpg" class="personagem-cover">
   <div class="personagem-tabs-container">
-    <a class="personagem-tab" href="#tab-marty">Marty Mcfly</a>
-    <a class="personagem-tab" href="#tab-doc">Doc Brown</a>
+  <c:forEach var="list" items="${lista_personagens}" varStatus="id">
+    <a class="personagem-tab" href="#tab-marty">${list.nomePersonagem}</a>
+    <!-----<a class="personagem-tab" href="#tab-doc">Doc Brown</a>
     <a class="personagem-tab" href="#tab-george">George Mcfly</a>
     <a class="personagem-tab" href="#tab-lorraine">Lorraine Mcfly</a>
-    <a class="personagem-tab" href="#tab-other">Other</a>
+    <a class="personagem-tab" href="#tab-other">Other</a>-->
+    </c:forEach>		
     <span class="personagem-tab-slider"></span>
   </div>
 </section>
 
 <!-- Main -->
 <main class="personagem-main">
+<c:forEach var="list" items="${lista_personagens}" varStatus="id">
   <section class="personagem-slide" id="tab-marty">
       <div class="row">
           <div class="col-md-6 col-xs-6 personagem-texto text-light">
-              <h1>Marty Mcfly</h1>
+              <h1>${list.nomePersonagem}</h1>
               <h3>Sobre:</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et purus id est scelerisque rutrum. Curabitur non pretium quam, et tristique nisi. Aliquam ipsum nunc, consectetur nec eros nec, rutrum commodo eros. Nam vehicula leo vitae nisl cursus, molestie aliquam dui elementum. Praesent hendrerit eu nisi porttitor interdum. Ut at condimentum magna. Donec odio velit, pulvinar eu porta sed, dictum ac arcu. Ut nec dolor in felis tristique pharetra finibus et erat. Sed vel magna ac tortor molestie suscipit vel nec justo. Ut tincidunt ultrices magna, ut placerat magna lacinia mollis.</p>
+              <p>${list.resumo}</p>
               
           </div>
           <div class="col-md-6 col-xs-6 text-light personagem-imagem">
@@ -77,7 +79,8 @@
           </div>
       </div>
     </section>
-  <section class="personagem-slide" id="tab-doc">
+    </c:forEach>
+  <!--<section class="personagem-slide" id="tab-doc">
       <div class="row">
           <div class="col-md-6 col-xs-6 personagem-texto text-light">
               <h1>Doc Brown</h1>
@@ -128,7 +131,7 @@
   <section class="personagem-slide" id="tab-other">
     <h1>Other</h1>
     <h3>something about other</h3>
-  </section>
+  </section>-->
 </main>
 
 <!-- partial -->
