@@ -29,7 +29,7 @@
 	</servlet>
 	<error-page>    
 	    <error-code>404</error-code>
-	    <location>/pages/erro/erro.jsp</location>
+	    <location>/pages/timeline/timeline.jsp</location>
 	</error-page>
 
 </web-app>

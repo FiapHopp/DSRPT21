@@ -14,13 +14,10 @@ public class LinhaDoTempoBo {
 	public LinhaDoTempoBo() throws Exception{
 		linhaDoTempoDaoOracle = (LinhaDoTempoDaoOracle) DAOFactory.getLinhaDoTempoDao();
 	}
-		
-	public LinhaDoTempoTo pesquisar (int id) throws SQLException,Exception{
-		return linhaDoTempoDaoOracle.pesquisar(id);
-	}
+	
 
 	public List <LinhaDoTempoTo> lista () throws SQLException, Exception{
-		System.out.println("ENTROU NO LISTA BO");
+		System.out.println("RETORNO LISTA BO: " + linhaDoTempoDaoOracle.lista());
 		return linhaDoTempoDaoOracle.lista();
 	}
 }
