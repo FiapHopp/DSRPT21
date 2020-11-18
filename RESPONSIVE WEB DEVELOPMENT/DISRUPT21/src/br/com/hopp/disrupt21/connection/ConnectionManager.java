@@ -8,32 +8,14 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-
 public class ConnectionManager {
 
-private static ConnectionManager single;
-	
-	private Properties configuracao;
-	
-	private ConnectionManager() throws FileNotFoundException, IOException{
-		configuracao = new Properties();
-		configuracao.load(new FileInputStream("banco.properties"));
+	public Connection DBConnectionManager() throws ClassNotFoundException, SQLException {
+		String dbURL = "jdbc:oracle:thin:@oracle.fiap.com.br:1521:orcl";
+		String user = "rm85252";
+		String pwd = "270393";
+		Class.forName("oracle.jdbc.OracleDriver");
+		return DriverManager.getConnection(dbURL, user, pwd);
 	}
-	
-	public static ConnectionManager getInstance() throws FileNotFoundException, IOException{
-		if(single ==null) {
-			single = new ConnectionManager();
-		}
-		return single;
-	}
-
-	
-	public Connection getConnection() throws ClassNotFoundException, SQLException{
-		Class.forName("oracle.jdbc.driver.OracleDriver");
-		Connection conexao = DriverManager.getConnection(configuracao.getProperty("url"),
-				configuracao.getProperty("usuario"),
-				configuracao.getProperty("senha"));
-		return conexao;
-	}
-	
+		
 }

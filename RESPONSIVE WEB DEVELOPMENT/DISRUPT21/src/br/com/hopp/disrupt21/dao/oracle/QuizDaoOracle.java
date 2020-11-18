@@ -15,9 +15,9 @@ public class QuizDaoOracle implements QuizDao {
 	
 	private Connection conexao;
 	
-	public QuizDaoOracle()throws Exception{
-		this.conexao = ConnectionManager.getInstance().getConnection();
-	}
+//	public QuizDaoOracle()throws Exception{
+//		this.conexao = ConnectionManager.getInstance().getConnection();
+//	}
 	
 	@Override
 	protected void finalize() throws Throwable {

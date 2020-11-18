@@ -9,11 +9,5 @@ public interface LinhaDoTempoDao {
 	
 	List<LinhaDoTempoTo> lista() throws SQLException, Exception;
 	
-	void atualizar (LinhaDoTempoTo linhaDoTempoTo)throws SQLException, Exception;
 	
-	LinhaDoTempoTo pesquisar(int id)throws SQLException, Exception;
-	
-	void remover(int id)throws SQLException, Exception;
-	
-	void cadastrar(LinhaDoTempoTo linhaDoTempoTo )throws SQLException, Exception;
 }

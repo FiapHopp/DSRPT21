@@ -100,21 +100,25 @@
         </div>
       </div>
 
-      <div class="timeline-item">
+      <!-- CRIA REPETICAO DA LINHA DO TEMPO -->
+      <c:forEach var="timeline" items="${lista_linhaTempo}" varStatus="id">
+        <div class="timeline-item">
 
-        <div class="timeline-img"></div>
-
-        <div class="timeline-content timeline-card js--fadeInLeft">
-          <div class="timeline-img-header">
-            <h2>Card Title</h2>
+          <div class="timeline-img"></div>
+  
+          <div class="timeline-content timeline-card js--fadeInLeft">
+            <div class="timeline-img-header">
+              <h2>Card Title</h2>
+            </div>
+            <div class="date">${timeline.anoAcontecimento}</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe
+              atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.
+            </p>
+            <a class="bnt-more" href="javascript:void(0)">More</a>
           </div>
-          <div class="date">10 JULY 2016</div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe
-            atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.
-          </p>
-          <a class="bnt-more" href="javascript:void(0)">More</a>
         </div>
-      </div>
+
+      </c:forEach>
 
       <div class="timeline-item">
 
