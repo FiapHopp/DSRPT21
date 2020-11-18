@@ -32,7 +32,7 @@ public class LinhaDoTempoDaoOracle implements LinhaDoTempoDao {
 	@Override
 	public List<LinhaDoTempoTo> lista() throws SQLException, Exception {
 		
-		PreparedStatement stmt = conexao.prepareStatement("");
+		PreparedStatement stmt = conexao.prepareStatement("Select * from V_LINHA_DO_TEMPO");
 		
 		ResultSet resultado = stmt.executeQuery();
 		
@@ -44,15 +44,15 @@ public class LinhaDoTempoDaoOracle implements LinhaDoTempoDao {
 	}
 
 	private LinhaDoTempoTo parse(ResultSet resultado) throws SQLException {
-		int id = resultado.getInt("");
-		String titulo = resultado.getString("");
-		int anoAcontecimento = resultado.getInt("");
-		String acontecimento = resultado.getString("");
+		//int id = resultado.getInt("");
+		String titulo = resultado.getString("TITULO");
+		//int anoAcontecimento = resultado.getInt("");
+		String acontecimento = resultado.getString("ACONTECIMENTO");
+		String resumo = resultado.getString("RESUMO");
+		//TempoAcontecimentoTo acontecimentoTo = new TempoAcontecimentoTo();
+		//LocalAcontecimentoTo localAcontecimentoTo = new LocalAcontecimentoTo();
 		
-		TempoAcontecimentoTo acontecimentoTo = new TempoAcontecimentoTo();
-		LocalAcontecimentoTo localAcontecimentoTo = new LocalAcontecimentoTo();
-		
-		LinhaDoTempoTo linhaDoTempoTo = new LinhaDoTempoTo(id, titulo, acontecimento, anoAcontecimento, acontecimentoTo, localAcontecimentoTo);
+		LinhaDoTempoTo linhaDoTempoTo = new LinhaDoTempoTo(titulo, acontecimento, resumo);
 		
 		
 		return linhaDoTempoTo;
