@@ -7,13 +7,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import java.sql.Connection;
+
 import br.com.hopp.disrupt21.factory.ConnectionFactory;
-import br.com.hopp.disrupt21.connection.ConnectionManager;
 import br.com.hopp.disrupt21.dao.LinhaDoTempoDao;
 import br.com.hopp.disrupt21.to.LinhaDoTempoTo;
-import br.com.hopp.disrupt21.to.LocalAcontecimentoTo;
-import br.com.hopp.disrupt21.to.TempoAcontecimentoTo;
 
 
 public class LinhaDoTempoDaoOracle implements LinhaDoTempoDao {
