@@ -17,9 +17,9 @@ import br.com.hopp.disrupt21.to.PersonagemTo;
 public class PersonagemDaoOracle implements PersonagemDao {
 	private Connection conexao;
 	
-	public PersonagemDaoOracle()throws Exception{
-		this.conexao = ConnectionManager.getInstance().getConnection();
-	}
+//	public PersonagemDaoOracle()throws Exception{
+//		this.conexao = ConnectionManager.getInstance().getConnection();
+//	}
 	
 	@Override
 	protected void finalize() throws Throwable {

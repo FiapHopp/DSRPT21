@@ -42,28 +42,44 @@ public class LinhaDoTempoController extends HttpServlet {
 	// MONTA TODOS AS INFORMACOES QUE A TIMELINE.JSP PRECISA E DEPOIS REDIRECIONA
 	private void listaLinhaDoTempo(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
-		try {
-			response.sendRedirect("/DISRUPT21/pages/timeline/timeline.jsp");
-
-			LinhaDoTempoBo linhaTempoBo = new LinhaDoTempoBo();
-
-			List<LinhaDoTempoTo> listaLinhaTempo = linhaTempoBo.lista();
-
-			if (listaLinhaTempo != null) {
-
-				request.setAttribute("lista_linhaTempo", listaLinhaTempo);
-
-				request.getRequestDispatcher("/DISRUPT21/pages/timeline/timeline.jsp").forward(request, response);
-
-			} else {
-
-				response.sendRedirect("/DISRUPT21/pages/erro/erro.jsp?msgStatus=Nenhuma linha do tempo encontrada");
-			}
-
-		} catch (IOException e) {
-			
-			e.printStackTrace();
-		}
+		LinhaDoTempoBo linhaBo = new LinhaDoTempoBo();
+		
+		System.out.println("ENTROU NO TRY");
+		
+		List<LinhaDoTempoTo> listaLinhaTempo = linhaBo.lista();
+		
+		System.out.println("BO: " + listaLinhaTempo);
+				
+		
+		
+				
+		response.sendRedirect("/DISRUPT21/pages/timeline/timeline.jsp");
+		
+//		try {
+//			
+//			//
+//
+//			LinhaDoTempoBo linhaTempoBo = new LinhaDoTempoBo();
+//			
+//			
+//
+//			List<LinhaDoTempoTo> listaLinhaTempo = linhaTempoBo.lista();
+//
+//			if (listaLinhaTempo != null) {
+//				
+//				request.setAttribute("lista_linhaTempo", listaLinhaTempo);
+//
+//				request.getRequestDispatcher("/DISRUPT21/pages/timeline/timeline.jsp").forward(request, response);
+//
+//			} else {
+//				System.out.println("SEM LINHA DO TEMPO");
+//				response.sendRedirect("/DISRUPT21/pages/erro/erro.jsp?msgStatus=Nenhuma linha do tempo encontrada");
+//			}
+//
+//		} catch (IOException e) {
+//			
+//			e.printStackTrace();
+//		}
 	}
 
 }

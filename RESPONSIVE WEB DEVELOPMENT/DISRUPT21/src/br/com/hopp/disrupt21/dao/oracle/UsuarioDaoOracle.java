@@ -15,10 +15,10 @@ public class UsuarioDaoOracle implements UsuarioDao {
 	
 	private Connection conexao;
 	
-	public UsuarioDaoOracle () throws Exception {
-		this.conexao= ConnectionManager.getInstance().getConnection();
-
-	}
+//	public UsuarioDaoOracle () throws Exception {
+//		this.conexao= ConnectionManager.getInstance().getConnection();
+//
+//	}
 	
 	@Override
 	protected void finalize() throws Throwable {

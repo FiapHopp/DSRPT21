@@ -14,11 +14,11 @@ import br.com.hopp.disrupt21.to.LocalAcontecimentoTo;
 public class LocalAcontecimentoDaoOracle implements LocalAcontecimentoDao {
 	
 	private Connection conexao;
-	
-	public LocalAcontecimentoDaoOracle () throws Exception {
-		this.conexao= ConnectionManager.getInstance().getConnection();
-
-	}
+//	
+//	public LocalAcontecimentoDaoOracle () throws Exception {
+//		this.conexao= ConnectionManager.getInstance().getConnection();
+//
+//	}
 	
 	@Override
 	protected void finalize() throws Throwable {

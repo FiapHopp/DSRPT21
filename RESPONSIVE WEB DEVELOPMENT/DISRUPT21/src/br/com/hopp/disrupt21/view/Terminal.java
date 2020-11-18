@@ -1,7 +1,9 @@
 package br.com.hopp.disrupt21.view;
 
-import br.com.hopp.disrupt21.dao.oracle.LinhaDoTempoDaoOracle;
-import br.com.hopp.disrupt21.dao.oracle.PersonagemDaoOracle;
+import java.util.List;
+
+import br.com.hopp.disrupt21.bo.LinhaDoTempoBo;
+import br.com.hopp.disrupt21.to.LinhaDoTempoTo;
 
 public class Terminal {
 
@@ -10,10 +12,12 @@ public class Terminal {
 		
 		//System.out.println(daoOracle.lista().size());
 		
-		PersonagemDaoOracle oracle = new PersonagemDaoOracle();
+		LinhaDoTempoBo linhaBo = new LinhaDoTempoBo();
 		
-		System.out.println(oracle.lista().size());
+		List<LinhaDoTempoTo> listaLinhaTempo = linhaBo.lista();
 		
+		System.out.println("BO: " + listaLinhaTempo);
+				
 	}
 
 }
