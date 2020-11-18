@@ -5,9 +5,10 @@ public class LinhaDoTempoTo {
 	private int id;
 	private String titulo;
 	private String acontecimento;
+	private String resumo;
 	private int anoAcontecimento;
-	private TempoAcontecimentoTo tempoAcontecimento;
-	private LocalAcontecimentoTo localAcontecimento;
+	private int idTempoAcontecimento;
+	private int idLocalAcontecimento;
 	
 	
 	public LinhaDoTempoTo() {
@@ -15,15 +16,23 @@ public class LinhaDoTempoTo {
 	}
 
 	public LinhaDoTempoTo(int id,String titulo, String acontecimento, int anoAcontecimento,
-			TempoAcontecimentoTo tempoAcontecimento, LocalAcontecimentoTo localAcontecimento) {
+			int idTempoAcontecimento, int idLocalAcontecimento) {
 		this.id = id;
 		this.titulo = titulo;
 		this.acontecimento = acontecimento;
 		this.anoAcontecimento = anoAcontecimento;
-		this.tempoAcontecimento = tempoAcontecimento;
-		this.localAcontecimento = localAcontecimento;
+		this.idTempoAcontecimento = idTempoAcontecimento;
+		this.idLocalAcontecimento = idLocalAcontecimento;
 	}
 	
+	
+	
+	public LinhaDoTempoTo(String titulo, String acontecimento, String resumo) {
+		this.titulo = titulo;
+		this.acontecimento = acontecimento;
+		this.resumo = resumo;
+	}
+
 	public String getTitulo() {
 		return titulo;
 	}
@@ -42,17 +51,22 @@ public class LinhaDoTempoTo {
 	public void setAnoAcontecimento(int anoAcontecimento) {
 		this.anoAcontecimento = anoAcontecimento;
 	}
-	public TempoAcontecimentoTo getTempoAcontecimento() {
-		return tempoAcontecimento;
+	
+
+	public int getIdTempoAcontecimento() {
+		return idTempoAcontecimento;
 	}
-	public void setTempoAcontecimento(TempoAcontecimentoTo tempoAcontecimento) {
-		this.tempoAcontecimento = tempoAcontecimento;
+
+	public void setIdTempoAcontecimento(int idTempoAcontecimento) {
+		this.idTempoAcontecimento = idTempoAcontecimento;
 	}
-	public LocalAcontecimentoTo getLocalAcontecimento() {
-		return localAcontecimento;
+
+	public int getIdLocalAcontecimento() {
+		return idLocalAcontecimento;
 	}
-	public void setLocalAcontecimento(LocalAcontecimentoTo localAcontecimento) {
-		this.localAcontecimento = localAcontecimento;
+
+	public void setIdLocalAcontecimento(int idLocalAcontecimento) {
+		this.idLocalAcontecimento = idLocalAcontecimento;
 	}
 
 	public int getId() {
@@ -61,6 +75,14 @@ public class LinhaDoTempoTo {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public String getResumo() {
+		return resumo;
+	}
+
+	public void setResumo(String resumo) {
+		this.resumo = resumo;
 	}
 	
 	

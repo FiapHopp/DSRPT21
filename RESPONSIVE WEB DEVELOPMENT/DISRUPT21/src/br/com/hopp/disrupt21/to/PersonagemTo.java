@@ -1,18 +1,21 @@
 package br.com.hopp.disrupt21.to;
 
+import java.util.Date;
+
 public class PersonagemTo {
 	
 	private int id;
 	private String nomePersonagem;
-	private int idadePersonagem;
+	private String idadePersonagem;
 	private AtorTo ator;
 	private String resumo;
+	private String sexo;
 	
-	public PersonagemTo(int id,String nomePersonagem, int idadePersonagem, AtorTo ator,String resumo) {
+	public PersonagemTo(int id,String nomePersonagem, String idadePersonagem,String resumo,String sexo) {
 		this.id= id;
 		this.nomePersonagem = nomePersonagem;
 		this.idadePersonagem = idadePersonagem;
-		this.ator = ator;
+		this.sexo = sexo;
 		this.resumo= resumo;
 	}
 	
@@ -28,11 +31,11 @@ public class PersonagemTo {
 		this.nomePersonagem = nomePersonagem;
 	}
 
-	public int getIdadePersonagem() {
+	public String getIdadePersonagem() {
 		return idadePersonagem;
 	}
 
-	public void setIdadePersonagem(int idadePersonagem) {
+	public void setIdadePersonagem(String idadePersonagem) {
 		this.idadePersonagem = idadePersonagem;
 	}
 
@@ -58,6 +61,14 @@ public class PersonagemTo {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public String getSexo() {
+		return sexo;
+	}
+
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
 	}
 	
 	
