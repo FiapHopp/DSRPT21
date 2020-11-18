@@ -1,6 +1,7 @@
 package br.com.hopp.disrupt21.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -8,10 +9,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.hopp.disrupt21.bo.PersonagemBo;
+import br.com.hopp.disrupt21.to.PersonagemTo;
+
 @WebServlet(urlPatterns = { "/personagens" })
 public class PersonagemController extends HttpServlet {
-	
-	
 
 	private static final long serialVersionUID = 1L;
 
@@ -22,29 +24,50 @@ public class PersonagemController extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		
+		// VERIFICA A URL PARA REDIRECIONAR
 		switch (request.getRequestURI()) {
 
-			case "/DISRUPT21/personagens":	
-				personagem(request, response);
+			case "/DISRUPT21/personagens":
+				try {
+					personagem(request, response);
+				} catch (Exception e) {
+
+					e.printStackTrace();
+				}
 				break;
-			case "/listar":
-				
-				break;
+	
 			default:
-				System.out.println("ENTROU default");
+				response.sendRedirect("/DISRUPT21/pages/erro/erro.jsp?msgStatus=Pagina não encontrada");
+
 		}
 
 	}
-	
-	public void personagem (HttpServletRequest request, HttpServletResponse response) {
+
+	// MONTA TODOS AS INFORMACOES QUE A PERSONAGEM.JSP PRECISA E DEPOIS REDIRECIONA
+	public void personagem(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		try {
 			response.sendRedirect("/DISRUPT21/pages/personagens/personagens.jsp");
+
+			PersonagemBo personagemBo = new PersonagemBo();
+
+			List<PersonagemTo> listaPersonagem = personagemBo.lista();
+
+			if (listaPersonagem != null) {
+
+				request.setAttribute("lista_personagens", listaPersonagem);
+
+				request.getRequestDispatcher("/DISRUPT21/pages/personagens/personagens.jsp").forward(request, response);
+
+			} else {
+
+				response.sendRedirect("/DISRUPT21/pages/erro/erro.jsp?msgStatus=Nenhum personagem encontrado");
+			}
+
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
-				
+
 	}
 
 }
