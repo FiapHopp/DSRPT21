@@ -53,8 +53,8 @@
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
       <c:forEach var="list" items="${lista_personagens}" varStatus="id">
-        <a class="personagem-tab" href="#tab-marty">${list.nomePersonagem}</a>    
-      </c:forEach>      
+        <a class="personagem-tab" href="#tab-${list.id}">${list.nomePersonagem}</a>
+        </c:forEach>	     
     </div>
   </div>
   <span class="personagem-tab-slider"></span>
@@ -63,7 +63,7 @@
 <!-- Main -->
 <main class="personagem-main">
 <c:forEach var="list" items="${lista_personagens}" varStatus="id">
-  <section class="personagem-slide" id="tab-marty">
+  <section class="personagem-slide" id="tab-${list.id}">
       <div class="row">
           <div class="col-md-6 col-xs-6 personagem-texto text-light">
               <h1>${list.nomePersonagem}</h1>
@@ -72,66 +72,14 @@
               
           </div>
           <div class="col-md-6 col-xs-6 text-light personagem-imagem">
-              <div class=" image-slider1">
-                  <div><img src="../../img/personagens/marty-1985.jpg" /></div>
-                  <img src="../../img/personagens/marty-1955.jpg" />
+              <div class="image-slider1">
+                  <div><img src="./img/personagens/${list.imgPass}" /></div>
+                  <img src="./img/personagens/${list.imgPres}" />
               </div>
           </div>
       </div>
     </section>
     </c:forEach>
-  <!--<section class="personagem-slide" id="tab-doc">
-      <div class="row">
-          <div class="col-md-6 col-xs-6 personagem-texto text-light">
-              <h1>Doc Brown</h1>
-              <h3>Sobre:</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et purus id est scelerisque rutrum. Curabitur non pretium quam, et tristique nisi. Aliquam ipsum nunc, consectetur nec eros nec, rutrum commodo eros. Nam vehicula leo vitae nisl cursus, molestie aliquam dui elementum. Praesent hendrerit eu nisi porttitor interdum. Ut at condimentum magna. Donec odio velit, pulvinar eu porta sed, dictum ac arcu. Ut nec dolor in felis tristique pharetra finibus et erat. Sed vel magna ac tortor molestie suscipit vel nec justo. Ut tincidunt ultrices magna, ut placerat magna lacinia mollis.</p>
-              
-          </div>
-          <div class="col-md-6 col-xs-6 text-light personagem-imagem">
-              <div class=" image-slider1">
-                  <div><img src="../../img/personagens/doc-1985.jpg" /></div>
-                  <img src="../../img/personagens/doc-1955.jpg" />
-              </div>
-          </div>
-      </div>
-  </section>
-  <section class="personagem-slide" id="tab-george">
-      <div class="row">
-          <div class="col-md-6 col-xs-6 personagem-texto text-light">
-              <h1>George Mcfly</h1>
-              <h3>Sobre:</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et purus id est scelerisque rutrum. Curabitur non pretium quam, et tristique nisi. Aliquam ipsum nunc, consectetur nec eros nec, rutrum commodo eros. Nam vehicula leo vitae nisl cursus, molestie aliquam dui elementum. Praesent hendrerit eu nisi porttitor interdum. Ut at condimentum magna. Donec odio velit, pulvinar eu porta sed, dictum ac arcu. Ut nec dolor in felis tristique pharetra finibus et erat. Sed vel magna ac tortor molestie suscipit vel nec justo. Ut tincidunt ultrices magna, ut placerat magna lacinia mollis.</p>
-              
-          </div>
-          <div class="col-md-6 col-xs-6 text-light personagem-imagem">
-              <div class=" image-slider1">
-                  <div><img src="../../../img/personagens/george-1985.jpg" /></div>
-                  <img src="../../img/personagens/george-1955.jpg" />
-              </div>
-          </div>
-      </div>
-  </section>
-  <section class="personagem-slide" id="tab-lorraine">
-      <div class="row">
-          <div class="col-md-6 col-xs-6 personagem-texto text-light">
-              <h1>Lorraine Mcfly</h1>
-              <h3>Sobre:</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et purus id est scelerisque rutrum. Curabitur non pretium quam, et tristique nisi. Aliquam ipsum nunc, consectetur nec eros nec, rutrum commodo eros. Nam vehicula leo vitae nisl cursus, molestie aliquam dui elementum. Praesent hendrerit eu nisi porttitor interdum. Ut at condimentum magna. Donec odio velit, pulvinar eu porta sed, dictum ac arcu. Ut nec dolor in felis tristique pharetra finibus et erat. Sed vel magna ac tortor molestie suscipit vel nec justo. Ut tincidunt ultrices magna, ut placerat magna lacinia mollis.</p>
-              
-          </div>
-          <div class="col-md-6 col-xs-6 text-light personagem-imagem">
-              <div class=" image-slider1">
-                  <div><img src="../../img/personagens/lorraine-1985.jpeg" /></div>
-                  <img src="../../img/personagens/lorraine-1955.jpg" />
-              </div>
-          </div>
-      </div>
-    </section>
-  <section class="personagem-slide" id="tab-other">
-    <h1>Other</h1>
-    <h3>something about other</h3>
-  </section>-->
 </main>
 
 <!-- partial -->
