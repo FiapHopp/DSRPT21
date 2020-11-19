@@ -43,43 +43,17 @@ public class LinhaDoTempoController extends HttpServlet {
 	private void listaLinhaDoTempo(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
 		LinhaDoTempoBo linhaBo = new LinhaDoTempoBo();
-		
-		System.out.println("ENTROU NO TRY");
-		
+
 		List<LinhaDoTempoTo> listaLinhaTempo = linhaBo.lista();
 		
-		System.out.println("BO: " + listaLinhaTempo);
-				
+		request.setAttribute("lista_linhaTempo", listaLinhaTempo);
+
+		request.getRequestDispatcher("/DISRUPT21/pages/timeline/timeline.jsp").forward(request, response);
+
+		System.out.println("Titulo" + listaLinhaTempo.get(0).getTitulo());
+						
 		
-		
-				
-		response.sendRedirect("/DISRUPT21/pages/timeline/timeline.jsp");
-		
-//		try {
-//			
-//			//
-//
-//			LinhaDoTempoBo linhaTempoBo = new LinhaDoTempoBo();
-//			
-//			
-//
-//			List<LinhaDoTempoTo> listaLinhaTempo = linhaTempoBo.lista();
-//
-//			if (listaLinhaTempo != null) {
-//				
-//				request.setAttribute("lista_linhaTempo", listaLinhaTempo);
-//
-//				request.getRequestDispatcher("/DISRUPT21/pages/timeline/timeline.jsp").forward(request, response);
-//
-//			} else {
-//				System.out.println("SEM LINHA DO TEMPO");
-//				response.sendRedirect("/DISRUPT21/pages/erro/erro.jsp?msgStatus=Nenhuma linha do tempo encontrada");
-//			}
-//
-//		} catch (IOException e) {
-//			
-//			e.printStackTrace();
-//		}
+							
 	}
 
 }

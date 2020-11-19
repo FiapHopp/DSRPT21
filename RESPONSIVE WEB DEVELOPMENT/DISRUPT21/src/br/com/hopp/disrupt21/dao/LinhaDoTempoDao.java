@@ -9,5 +9,4 @@ public interface LinhaDoTempoDao {
 	
 	List<LinhaDoTempoTo> lista() throws SQLException, Exception;
 	
-	
 }
