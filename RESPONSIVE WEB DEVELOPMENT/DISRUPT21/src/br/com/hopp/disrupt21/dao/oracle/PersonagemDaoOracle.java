@@ -36,10 +36,12 @@ public class PersonagemDaoOracle implements PersonagemDao {
 		String nomePersonagem = resultado.getString("NM_PERSONAGEM");
 		String resumo = resultado.getString("RESUMO");
 		String sexo = resultado.getNString("SEXO");
+		String imgPass = resultado.getString("IMGPASS");
+		String imgPres = resultado.getString("IMGPRES");
 		
 		//AtorTo atorTo = new AtorTo(idAtor);
 		
-		PersonagemTo personagemTo = new PersonagemTo(id, nomePersonagem, idadePersonagem, resumo,sexo);
+		PersonagemTo personagemTo = new PersonagemTo(id, nomePersonagem, idadePersonagem, resumo,sexo,imgPass,imgPres);
 		
 		return personagemTo;
 		

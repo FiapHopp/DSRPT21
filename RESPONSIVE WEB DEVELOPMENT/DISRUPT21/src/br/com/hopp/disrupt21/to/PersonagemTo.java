@@ -10,13 +10,34 @@ public class PersonagemTo {
 	private AtorTo ator;
 	private String resumo;
 	private String sexo;
+	private String imgPass;
+	private String imgPres;
 	
-	public PersonagemTo(int id,String nomePersonagem, String idadePersonagem,String resumo,String sexo) {
+	
+	public String getImgPass() {
+		return imgPass;
+	}
+
+	public void setImgPass(String imgPass) {
+		this.imgPass = imgPass;
+	}
+
+	public String getImgPres() {
+		return imgPres;
+	}
+
+	public void setImgPres(String imgPres) {
+		this.imgPres = imgPres;
+	}
+
+	public PersonagemTo(int id,String nomePersonagem, String idadePersonagem,String resumo,String sexo, String imgPass, String imgPres) {
 		this.id= id;
 		this.nomePersonagem = nomePersonagem;
 		this.idadePersonagem = idadePersonagem;
 		this.sexo = sexo;
 		this.resumo= resumo;
+		this.imgPass = imgPass;
+		this.imgPres = imgPres;
 	}
 	
 	public PersonagemTo() {
