@@ -7,12 +7,12 @@
 <title>Timeline</title>
 <link href="https://fonts.googleapis.com/css?family=Roboto:100i,300,400,500,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
-  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css'>
-  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FiapHopp/DSRPT21@main/RESPONSIVE%20WEB%20DEVELOPMENT/DISRUPT21/WebContent/css/style.css">
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css'>    
 </head>
 
-<body>
-  <header class="text-center">
+<body style="background-color: black;">
+  <header class="text-center mb-5">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -44,46 +44,53 @@
 
   <section class="timeline">
     <div class="container-fluid">
-    <div class="timeline-item">
-
-        <div class="timeline-img"></div>
-
-        <div class="timeline-content timeline-card js--fadeInRight">
-          <div class="timeline-img-header">
-            <h2>Card Title</h2>
-          </div>
-          <div class="date">19 AUG 2016</div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe
-            atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.
-          </p>
-          <a class="bnt-more" href="javascript:void(0) data-toggle="modal" data-target="#exampleModalLong"">More</a>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-
-        <div class="timeline-img"></div>
-
-        <div class="timeline-content js--fadeInLeft">
-          <div class="date">1 SEP 2016</div>
-          <h2>Title</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe
-            atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.
-          </p>
-          <a class="bnt-more" href="javascript:void(0) data-toggle="modal" data-target="#exampleModalLong"">More</a>
-        </div>
-      </div>
-          
-
-    </div>
     
+    <c:forEach var="timeline" items="${lista_linhaTempo}" varStatus="id">
+      <div class="timeline-item">
+        <div class="timeline-img"></div>
+        
+        <div class="timeline-content js--fadeInLeft">
+          <h2>${timeline.titulo}</h2>
+          <div class="date">${timeline.anoAcontecimento}</div>
+            <p>${timeline.resumo}</p>
+            <button type="button" class="btn btn-warning" href="javascript:void(0)" data-toggle="modal" data-target="#modal_${id.count}">
+			  Saiba mais
+			</button>          
+        </div>
+      </div>
+      
+      </c:forEach>
+    </div>
   </section>
   <!-- partial -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
   <script src='https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js'></script>
-  <script src="../../js/script.js"></script>
+  <script src="./js/script.js"></script>
 
 </body>
+
+<c:forEach var="timeline" items="${lista_linhaTempo}" varStatus="id">
+<div class="modal fade" id="modal_${id.count}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">${timeline.titulo}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ${timeline.acontecimento}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>        
+      </div>
+    </div>
+  </div>
+</div>
+</c:forEach>
+
+
 </html>
