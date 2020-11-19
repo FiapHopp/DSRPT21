@@ -5,9 +5,7 @@ import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 
 import br.com.hopp.disrupt21.bo.PersonagemBo;
 import br.com.hopp.disrupt21.to.PersonagemTo;
@@ -44,17 +42,16 @@ public class PersonagemController extends HttpServlet {
 	}
 
 	// MONTA TODOS AS INFORMACOES QUE A PERSONAGEM.JSP PRECISA E DEPOIS REDIRECIONA
-	public void personagem(HttpServletRequest request, HttpServletResponse response) throws Exception {
+	private void personagem(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
 		PersonagemBo personagemBo = new PersonagemBo();
 
 		List<PersonagemTo> listaPersonagem = personagemBo.lista();
-		
 		request.setAttribute("lista_personagens", listaPersonagem);
 
-		request.getRequestDispatcher("/DISRUPT21/pages/personagens/personagens.jsp").forward(request, response);
+		request.getRequestDispatcher("/pages/personagens/personagens.jsp").forward(request, response);
 
-
+		System.out.println("passou");
 	}
 
 }
