@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import br.com.hopp.disrupt21.factory.ConnectionFactory;
@@ -40,13 +41,13 @@ public class LinhaDoTempoDaoOracle implements LinhaDoTempoDao {
 	private LinhaDoTempoTo parse(ResultSet resultado) throws SQLException {
 		//int id = resultado.getInt("");
 		String titulo = resultado.getString("TITULO");
-		//int anoAcontecimento = resultado.getInt("");
+		Date anoAcontecimento = resultado.getDate("DT_ACONTECIMENTO");
 		String acontecimento = resultado.getString("ACONTECIMENTO");
 		String resumo = resultado.getString("RESUMO");
 		//TempoAcontecimentoTo acontecimentoTo = new TempoAcontecimentoTo();
 		//LocalAcontecimentoTo localAcontecimentoTo = new LocalAcontecimentoTo();
 		
-		LinhaDoTempoTo linhaDoTempoTo = new LinhaDoTempoTo(titulo, acontecimento, resumo);
+		LinhaDoTempoTo linhaDoTempoTo = new LinhaDoTempoTo(titulo, acontecimento, resumo,anoAcontecimento);
 		
 		
 		return linhaDoTempoTo;

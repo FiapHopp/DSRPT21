@@ -9,6 +9,7 @@ import java.util.List;
 
 import br.com.hopp.disrupt21.connection.ConnectionManager;
 import br.com.hopp.disrupt21.dao.UsuarioDao;
+import br.com.hopp.disrupt21.to.RankingTo;
 import br.com.hopp.disrupt21.to.UsuarioTo;
 
 public class UsuarioDaoOracle implements UsuarioDao {
@@ -28,13 +29,13 @@ public class UsuarioDaoOracle implements UsuarioDao {
 	}
 	
 	private UsuarioTo parse(ResultSet resultado) throws SQLException{
-		int id = resultado.getInt("");
 		String nome = resultado.getString("");
+		int id = resultado.getInt("");
 		String email = resultado.getString("");
 		
-		UsuarioTo usuarioTo = new UsuarioTo(id, nome, email);
+		UsuarioTo to = new UsuarioTo(id, nome, email);
 		
-		return usuarioTo;
+		return to;
 	}
 	
 	
@@ -59,16 +60,8 @@ public class UsuarioDaoOracle implements UsuarioDao {
 
 	@Override
 	public UsuarioTo pesquisar(int id) throws SQLException, Exception {
-		PreparedStatement stmt = conexao.prepareStatement("");
-		
-		stmt.setInt(1, id);
-		
-		ResultSet resultado = stmt.executeQuery();
-		
-		if(resultado.next())
-			return parse(resultado);
-		
-			return null;
+	
+		return null;
 
 	}
 
@@ -80,11 +73,11 @@ public class UsuarioDaoOracle implements UsuarioDao {
 
 	@Override
 	public void cadastrar(UsuarioTo usuarioTo) throws SQLException, Exception {
-		PreparedStatement stmt = conexao.prepareStatement("");
+		PreparedStatement stmt = conexao.prepareStatement("Insert into T_USUARIO(ID_USUARIO,NM_USUARIO,EMAIL)"
+				+ "values(SEQ_USUARIO,?,?)");
 		
-		stmt.setInt(1,usuarioTo.getId());
-		stmt.setString(2, usuarioTo.getEmail());
-		stmt.setString(3, usuarioTo.getNome());
+		stmt.setString(1, usuarioTo.getEmail());
+		stmt.setString(2, usuarioTo.getNome());
 		
 		stmt.executeUpdate();
 		
