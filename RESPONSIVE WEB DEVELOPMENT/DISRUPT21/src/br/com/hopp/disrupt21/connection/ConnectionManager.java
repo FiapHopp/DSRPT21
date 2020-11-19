@@ -11,7 +11,7 @@ import java.util.Properties;
 
 public class ConnectionManager {
 
-private static ConnectionManager single;
+	private static ConnectionManager single;
 	
 	private Properties configuracao;
 	
