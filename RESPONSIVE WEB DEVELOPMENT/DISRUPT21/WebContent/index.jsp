@@ -24,13 +24,13 @@
             <a class="nav-link" href="./index.jsp">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./pages/personagens/personagens.jsp">Personagens</a>
+            <a class="nav-link" href="/DISRUPT21/personagens">Personagens</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./pages/timeline/timeline.jsp">Linha do Tempo</a>
+            <a class="nav-link" href="/DISRUPT21/linhaDoTempo">Linha do Tempo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./pages/quiz/quiz.jsp">Quiz</a>
+            <a class="nav-link" href="/DISRUPT21/quiz">Quiz</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./pages/about/about.jsp">Sobre o Projeto</a>
@@ -50,8 +50,8 @@
         <img class="index-img" src="./img/bttf-logo.png" alt="logo-index"></img>
       </div>
       <div class="index-buttons">
-        <a href="./pages/personagens/personagens.jsp"><button type="button" class="btn btn-warning btn-lg">Personagem</button></a>
-        <a href="./pages/timeline/timeline.jsp"><button type="button" class="btn btn-warning btn-lg">Timeline</button></a>
+        <a href="/DISRUPT21/personagens"><button type="button" class="btn btn-warning btn-lg">Personagem</button></a>
+        <a href="/DISRUPT21/linhaDoTempo"><button type="button" class="btn btn-warning btn-lg">Timeline</button></a>
       </div>
     </main>
     <div class="background">
