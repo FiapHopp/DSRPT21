@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +15,7 @@
 </head>
 
 <body style="background-color: black;">
-  <header class="text-center mb-5">
+  <header class="text-center">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -24,13 +26,13 @@
             <a class="nav-link" href="../../index.jsp">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../personagens/personagens.jsp">Personagens</a>
+            <a class="nav-link" href="/DISRUPT21/personagens">Personagens</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../timeline/timeline.jsp">Linha do Tempo</a>
+            <a class="nav-link" href="/DISRUPT21/linhaDoTempo">Linha do Tempo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../quiz/quiz.jsp">Quiz</a>
+            <a class="nav-link" href="/DISRUPT21/quiz">Quiz</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../about/about.jsp">Sobre o Projeto</a>

@@ -46,15 +46,19 @@
 </header>
 
 <!-----FIM DA NAVBAR / MENU SUPERIOR-->
-<section class="personagem-tabs">
-  <img src="./img/personagens-cover.jpg" class="personagem-cover">
-  <div class="personagem-tabs-container">
-  <c:forEach var="list" items="${lista_personagens}" varStatus="id">
-    <a class="personagem-tab" href="#tab-${list.id}">${list.nomePersonagem}</a>
-    </c:forEach>		
-    <span class="personagem-tab-slider"></span>
+
+  <div class="dropdown">
+    <button style="width: 100vw;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Selecione o personagem
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <c:forEach var="list" items="${lista_personagens}" varStatus="id">
+        <a class="personagem-tab" href="#tab-${list.id}">${list.nomePersonagem}</a>
+        </c:forEach>	     
+    </div>
   </div>
-</section>
+  <span class="personagem-tab-slider"></span>
+</div>
 
 <!-- Main -->
 <main class="personagem-main">
