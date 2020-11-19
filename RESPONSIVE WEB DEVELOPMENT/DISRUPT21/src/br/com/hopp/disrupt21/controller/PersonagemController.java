@@ -7,7 +7,9 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
+import br.com.hopp.disrupt21.bo.LinhaDoTempoBo;
 import br.com.hopp.disrupt21.bo.PersonagemBo;
+import br.com.hopp.disrupt21.to.LinhaDoTempoTo;
 import br.com.hopp.disrupt21.to.PersonagemTo;
 
 @WebServlet(urlPatterns = { "/personagens" })

@@ -26,10 +26,10 @@
 	<servlet>
 		<servlet-name>UsuarioController</servlet-name>
 		<servlet-class>br.com.hopp.disrupt21.controller</servlet-class>
-	</servlet>
+	</servlet>	
 	<error-page>    
 	    <error-code>404</error-code>
-	    <location>/pages/timeline/timeline.jsp</location>
+	    <location>/pages/erro/erro.jsp</location>
 	</error-page>
 
 </web-app>
