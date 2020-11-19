@@ -7,7 +7,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-
 import br.com.hopp.disrupt21.factory.ConnectionFactory;
 import br.com.hopp.disrupt21.dao.LinhaDoTempoDao;
 import br.com.hopp.disrupt21.to.LinhaDoTempoTo;

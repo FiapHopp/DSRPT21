@@ -10,6 +10,7 @@ import java.util.List;
 
 import br.com.hopp.disrupt21.connection.ConnectionManager;
 import br.com.hopp.disrupt21.dao.PersonagemDao;
+import br.com.hopp.disrupt21.factory.ConnectionFactory;
 import br.com.hopp.disrupt21.to.AtorTo;
 import br.com.hopp.disrupt21.to.LinhaDoTempoTo;
 import br.com.hopp.disrupt21.to.PersonagemTo;
@@ -46,7 +47,8 @@ public class PersonagemDaoOracle implements PersonagemDao {
 
 	@Override
 	public List<PersonagemTo> lista() throws SQLException, Exception {
-		PreparedStatement stmt = conexao.prepareStatement("Select * from T_PERSONAGEM");
+		Connection conexaumo = ConnectionFactory.getConnection();
+		PreparedStatement stmt = conexaumo.prepareStatement("Select * from T_PERSONAGEM");
 		
 		ResultSet resultado = stmt.executeQuery();
 		
