@@ -46,12 +46,15 @@ public class LinhaDoTempoController extends HttpServlet {
 
 		List<LinhaDoTempoTo> listaLinhaTempo = linhaBo.lista();
 		
-		request.setAttribute("lista_linhaTempo", listaLinhaTempo);
-
-		request.getRequestDispatcher("/DISRUPT21/pages/timeline/timeline.jsp").forward(request, response);
-
-		System.out.println("Titulo" + listaLinhaTempo.get(0).getTitulo());
-						
+		if(listaLinhaTempo.isEmpty()) {
+			response.sendRedirect("/DISRUPT21/pages/erro/erro.jsp?msgStatus=Nenhuma linha do tempo encontrada.");
+			
+		}else {
+			request.setAttribute("lista_linhaTempo", listaLinhaTempo);
+			System.out.println("ENTROU NO GET REQUEST");
+			request.getRequestDispatcher("/pages/timeline/timeline.jsp").forward(request, response);
+			
+		}
 		
 							
 	}

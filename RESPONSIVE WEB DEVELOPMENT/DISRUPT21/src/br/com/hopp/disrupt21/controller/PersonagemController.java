@@ -9,7 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.hopp.disrupt21.bo.LinhaDoTempoBo;
 import br.com.hopp.disrupt21.bo.PersonagemBo;
+import br.com.hopp.disrupt21.to.LinhaDoTempoTo;
 import br.com.hopp.disrupt21.to.PersonagemTo;
 
 @WebServlet(urlPatterns = { "/personagens" })
@@ -45,29 +47,21 @@ public class PersonagemController extends HttpServlet {
 
 	// MONTA TODOS AS INFORMACOES QUE A PERSONAGEM.JSP PRECISA E DEPOIS REDIRECIONA
 	public void personagem(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		try {
-			response.sendRedirect("/DISRUPT21/pages/personagens/personagens.jsp");
+		System.out.println("ENTROU NO METODO PERSONAGEM");
+				
+		PersonagemBo personagemBo = new PersonagemBo();
+	
+	//	List<PersonagemTo> listaPersonagem = personagemBo.lista();
+		String teste = "Lucas";
+			
+		request.setAttribute("teste", teste);
+		request.getRequestDispatcher("/DISRUPT21/pages/personagens/personagens.jsp").forward(request, response);
+		//response.sendRedirect("/DISRUPT21/pages/personagens/personagens.jsp");
+			
+				
 
-			PersonagemBo personagemBo = new PersonagemBo();
 
-			List<PersonagemTo> listaPersonagem = personagemBo.lista();
-
-			if (listaPersonagem != null) {
-
-				request.setAttribute("lista_personagens", listaPersonagem);
-
-				request.getRequestDispatcher("/DISRUPT21/pages/personagens/personagens.jsp").forward(request, response);
-
-			} else {
-
-				response.sendRedirect("/DISRUPT21/pages/erro/erro.jsp?msgStatus=Nenhum personagem encontrado");
-			}
-
-		} catch (IOException e) {
-
-			e.printStackTrace();
-		}
-
+		
 	}
 
 }
