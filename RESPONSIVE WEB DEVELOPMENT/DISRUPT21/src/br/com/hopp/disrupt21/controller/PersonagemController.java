@@ -45,28 +45,15 @@ public class PersonagemController extends HttpServlet {
 
 	// MONTA TODOS AS INFORMACOES QUE A PERSONAGEM.JSP PRECISA E DEPOIS REDIRECIONA
 	public void personagem(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		try {
-			response.sendRedirect("/DISRUPT21/pages/personagens/personagens.jsp");
 
-			PersonagemBo personagemBo = new PersonagemBo();
+		PersonagemBo personagemBo = new PersonagemBo();
 
-			List<PersonagemTo> listaPersonagem = personagemBo.lista();
+		List<PersonagemTo> listaPersonagem = personagemBo.lista();
+		
+		request.setAttribute("lista_personagens", listaPersonagem);
 
-			if (listaPersonagem != null) {
+		request.getRequestDispatcher("/DISRUPT21/pages/personagens/personagens.jsp").forward(request, response);
 
-				request.setAttribute("lista_personagens", listaPersonagem);
-
-				request.getRequestDispatcher("/DISRUPT21/pages/personagens/personagens.jsp").forward(request, response);
-
-			} else {
-
-				response.sendRedirect("/DISRUPT21/pages/erro/erro.jsp?msgStatus=Nenhum personagem encontrado");
-			}
-
-		} catch (IOException e) {
-
-			e.printStackTrace();
-		}
 
 	}
 
