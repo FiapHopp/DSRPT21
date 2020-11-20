@@ -8,8 +8,8 @@ public class ConnectionManager {
 
 	public Connection DBConnectionManager() throws ClassNotFoundException, SQLException {
 		String dbURL = "jdbc:oracle:thin:@oracle.fiap.com.br:1521:orcl";
-		String user = "rm85252";
-		String pwd = "270393";
+		String user = "rm86305";
+		String pwd = "040300";
 		Class.forName("oracle.jdbc.OracleDriver");
 		return DriverManager.getConnection(dbURL, user, pwd);
 	}

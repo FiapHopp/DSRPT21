@@ -1,6 +1,8 @@
 package br.com.hopp.disrupt21.to;
 
 public class QuizViewTo {
+	
+	private int idQuiz;
 	private String nomeTitulo;
 	private String pergunta;
 	private int valorPergunta;
@@ -17,7 +19,7 @@ public class QuizViewTo {
 	}
 
 	public QuizViewTo(String nomeTitulo, String pergunta, int valorPergunta, String respostaCerta, String resposta1,
-			String resposta2, String resposta3, String resposta4, String resposta5) {
+			String resposta2, String resposta3, String resposta4, String resposta5,int idQuiz) {
 		this.nomeTitulo = nomeTitulo;
 		this.pergunta = pergunta;
 		this.valorPergunta = valorPergunta;
@@ -27,6 +29,7 @@ public class QuizViewTo {
 		this.resposta3 = resposta3;
 		this.resposta4 = resposta4;
 		this.resposta5 = resposta5;
+		this.idQuiz = idQuiz;
 	}
 	
 	public String getNomeTitulo() {
@@ -82,6 +85,14 @@ public class QuizViewTo {
 	}
 	public void setResposta5(String resposta5) {
 		this.resposta5 = resposta5;
+	}
+
+	public int getIdQuiz() {
+		return idQuiz;
+	}
+
+	public void setIdQuiz(int idQuiz) {
+		this.idQuiz = idQuiz;
 	}
 	
 	

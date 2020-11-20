@@ -31,13 +31,13 @@ public class PersonagemDaoOracle implements PersonagemDao {
 
 	private PersonagemTo parse(ResultSet resultado)throws SQLException{
 		int id = resultado.getInt("ID_PERSONAGEM");
-		String idadePersonagem = resultado.getString("DT_NASCIMENTO");
+		int idadePersonagem = resultado.getInt("IDADE");
 		//int idAtor = resultado.getInt("");
 		String nomePersonagem = resultado.getString("NM_PERSONAGEM");
 		String resumo = resultado.getString("RESUMO");
 		String sexo = resultado.getNString("SEXO");
-		String imgPass = resultado.getString("IMGPASS");
-		String imgPres = resultado.getString("IMGPRES");
+		String imgPass = resultado.getString("URL_IMAGEM_PASSADO");
+		String imgPres = resultado.getString("URL_IMAGEM_PRESENTE");
 		
 		//AtorTo atorTo = new AtorTo(idAtor);
 		
@@ -50,7 +50,7 @@ public class PersonagemDaoOracle implements PersonagemDao {
 	@Override
 	public List<PersonagemTo> lista() throws SQLException, Exception {
 		Connection conexaumo = ConnectionFactory.getConnection();
-		PreparedStatement stmt = conexaumo.prepareStatement("Select * from T_PERSONAGEM");
+		PreparedStatement stmt = conexaumo.prepareStatement("Select * from V_PERSONAGEM");
 		
 		ResultSet resultado = stmt.executeQuery();
 		
@@ -68,10 +68,10 @@ public class PersonagemDaoOracle implements PersonagemDao {
 	}
 
 	@Override
-	public PersonagemTo pesquisar(int idQuiz) throws SQLException, Exception {
-		PreparedStatement stmt = conexao.prepareStatement("Select * V_QUIZ where ID_QUIZ = ? ");
+	public PersonagemTo pesquisar(int id) throws SQLException, Exception {
+		PreparedStatement stmt = conexao.prepareStatement("");
 		
-		stmt.setInt(1, idQuiz);
+		stmt.setInt(1, id);
 		
 		ResultSet resultado = stmt.executeQuery();
 		

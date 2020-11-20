@@ -41,8 +41,9 @@ public class QuizViewDaoOracle implements QuizViewDao {
 		String resposta3= resultado.getString("RESPOSTA3");
 		String resposta4= resultado.getString("RESPOSTA4");
 		String resposta5= resultado.getString("RESPOSTA5");
+		int idQuiz = resultado.getInt("ID_QUIZ");
 		
-		QuizViewTo to = new QuizViewTo(nomeTitulo, pergunta, valorPergunta, respostaCerta, resposta1, resposta2, resposta3, resposta4, resposta5);
+		QuizViewTo to = new QuizViewTo(nomeTitulo, pergunta, valorPergunta, respostaCerta, resposta1, resposta2, resposta3, resposta4, resposta5,idQuiz);
 		return to;
 	}
 
@@ -50,7 +51,7 @@ public class QuizViewDaoOracle implements QuizViewDao {
 	public QuizViewTo pesquisar(int id) throws SQLException, Exception {
 		Connection conexao = ConnectionFactory.getConnection();
 		
-		PreparedStatement stmt = conexao.prepareStatement("");
+		PreparedStatement stmt = conexao.prepareStatement("Select * from V_QUIZ where ID_QUIZ = ?");
 		
 		stmt.setInt(1, id);
 		
