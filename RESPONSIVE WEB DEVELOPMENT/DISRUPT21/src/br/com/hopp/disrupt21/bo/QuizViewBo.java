@@ -19,4 +19,10 @@ public class QuizViewBo {
 	public List<QuizViewTo> lista () throws SQLException, Exception{
 		return viewDaoOracle.lista();
 	}
+	
+	public QuizViewTo pesquisar(int id) throws SQLException, Exception {
+		return viewDaoOracle.pesquisar(id);
+		
+	}
+	
 }

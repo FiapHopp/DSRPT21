@@ -14,7 +14,7 @@
   <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css'>    
 </head>
 
-<body style="background-color: black;">
+<body class="bg-timeline">
   <header class="text-center">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,10 +35,10 @@
             <a class="nav-link" href="/DISRUPT21/quiz">Quiz</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../about/about.jsp">Sobre o Projeto</a>
+            <a class="nav-link" href="./pages/about/about.jsp">Sobre o Projeto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../game/game.jsp">Minigame</a>
+            <a class="nav-link" data-toggle="modal" data-target="#gameModal"  href="../game/game.jsp">Minigame</a>
           </li>
         </ul>
       </div>
@@ -95,5 +95,25 @@
 </div>
 </c:forEach>
 
+<!-- Modal Game -->
+<div class="modal fade" id="gameModal" tabindex="-1" role="dialog" aria-labelledby="gameModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="gameModalLabel">Time Travel</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+          </div>
+          <div class="modal-body">
+              Para acessar a tela desejada será necessário uma viagem ao passado. Deseja continuar?
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <a href="../game/game.jsp"><button type="button" class="btn btn-success">Acessar</button></a>
+          </div>
+      </div>
+  </div>
+</div>
 
 </html>
