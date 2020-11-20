@@ -42,7 +42,7 @@
       </div>
     </nav>
 </header>
-<div class="container mt-5">        
+<div class="container mt-5">
         <div class="row"><br><br>
             <div class="col-sm-8 col-sm-offset-2">
                 <div class="loader">
@@ -53,7 +53,7 @@
                     </div>
 
                     <div id="quiz">
-                  
+
                         <div class="question">
                             <h3><span class="label label-warning" id="qid">1</span>
                             <span id="question"> Para que ano Marty volta no tempo?</span>
@@ -65,13 +65,13 @@
                             <label for="f-option" class="element-animation">1955</label>
                             <div class="check"></div>
                           </li>
-                          
+
                           <li>
                             <input type="radio" id="s-option" name="selector" value="2">
                             <label for="s-option" class="element-animation">1960</label>
                             <div class="check"><div class="inside"></div></div>
                           </li>
-                          
+
                           <li>
                             <input type="radio" id="t-option" name="selector" value="3">
                             <label for="t-option" class="element-animation">1959</label>
@@ -88,7 +88,7 @@
                 <div class="text-muted">
                     <span id="answer"></span>
                 </div>
-                
+
             </div>
         </div>
         <div class="row">
@@ -111,13 +111,40 @@
         </div>
     </div>
 
- 
+
   <!-- partial -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
   <script src='https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js'></script>
   <script src="../../js/script.js"></script>
-
+  <div class="modal fade" id="quizModal" tabindex="-1" role="dialog" aria-labelledby="quizModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="quizModalLabel">New message</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Recipient:</label>
+              <input type="text" class="form-control" id="nome-usuario">
+            </div>
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Message:</label>
+              <input type="text" class="form-control" id="email-usuario">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Send message</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
