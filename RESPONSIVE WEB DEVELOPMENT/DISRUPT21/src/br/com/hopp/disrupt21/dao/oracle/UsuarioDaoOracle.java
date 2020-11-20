@@ -85,7 +85,7 @@ public class UsuarioDaoOracle implements UsuarioDao {
 		stmt.setString(2, usuarioTo.getEmail());
 		
 		stmt.executeUpdate();
-		System.out.println("JESUS CRISTO REINA");
+
 	}
 
 }

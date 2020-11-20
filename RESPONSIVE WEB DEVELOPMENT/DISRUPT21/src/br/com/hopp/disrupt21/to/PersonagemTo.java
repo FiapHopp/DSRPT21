@@ -6,7 +6,7 @@ public class PersonagemTo {
 	
 	private int id;
 	private String nomePersonagem;
-	private String idadePersonagem;
+	private int idadePersonagem;
 	private AtorTo ator;
 	private String resumo;
 	private String sexo;
@@ -30,7 +30,7 @@ public class PersonagemTo {
 		this.imgPres = imgPres;
 	}
 
-	public PersonagemTo(int id,String nomePersonagem, String idadePersonagem,String resumo,String sexo, String imgPass, String imgPres) {
+	public PersonagemTo(int id,String nomePersonagem, int idadePersonagem,String resumo,String sexo, String imgPass, String imgPres) {
 		this.id= id;
 		this.nomePersonagem = nomePersonagem;
 		this.idadePersonagem = idadePersonagem;
@@ -52,11 +52,11 @@ public class PersonagemTo {
 		this.nomePersonagem = nomePersonagem;
 	}
 
-	public String getIdadePersonagem() {
+	public int getIdadePersonagem() {
 		return idadePersonagem;
 	}
 
-	public void setIdadePersonagem(String idadePersonagem) {
+	public void setIdadePersonagem(int idadePersonagem) {
 		this.idadePersonagem = idadePersonagem;
 	}
 

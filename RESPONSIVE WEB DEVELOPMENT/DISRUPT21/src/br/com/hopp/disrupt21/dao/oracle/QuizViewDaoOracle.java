@@ -27,6 +27,11 @@ public class QuizViewDaoOracle implements QuizViewDao {
 		while (resultado.next()) {
 			lista.add(parse(resultado));			
 		}
+		
+		
+		stmt.close();
+		conexao.close();
+		
 		return lista;
 	}
 
@@ -41,25 +46,38 @@ public class QuizViewDaoOracle implements QuizViewDao {
 		String resposta3= resultado.getString("RESPOSTA3");
 		String resposta4= resultado.getString("RESPOSTA4");
 		String resposta5= resultado.getString("RESPOSTA5");
+		int idQuiz = resultado.getInt("ID_QUIZ");
 		
-		QuizViewTo to = new QuizViewTo(nomeTitulo, pergunta, valorPergunta, respostaCerta, resposta1, resposta2, resposta3, resposta4, resposta5);
+		QuizViewTo to = new QuizViewTo(nomeTitulo, pergunta, valorPergunta, respostaCerta, resposta1, resposta2, resposta3, resposta4, resposta5,idQuiz);
 		return to;
 	}
 
 	@Override
-	public QuizViewTo pesquisar(int id) throws SQLException, Exception {
+	public List<QuizViewTo> pesquisar(int id) throws SQLException, Exception {
 		Connection conexao = ConnectionFactory.getConnection();
 		
-		PreparedStatement stmt = conexao.prepareStatement("");
+		PreparedStatement stmt = conexao.prepareStatement("Select * from V_QUIZ where ID_QUIZ = ?");
 		
 		stmt.setInt(1, id);
 		
 		ResultSet resultado = stmt.executeQuery();
 		
+<<<<<<< HEAD
+		List<QuizViewTo> lista = new ArrayList<QuizViewTo>();
+		while (resultado.next()) {
+			lista.add(parse(resultado));			
+		}
+		return lista;
+=======
+		
 		if(resultado.next())
 			return parse(resultado);
 		
+		stmt.close();
+		conexao.close();
+		
 			return null;
+>>>>>>> de3eb676ac02dc47a06e58f2a7b181daf0ac346c
 	}
 
 	

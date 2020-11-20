@@ -3,6 +3,7 @@ package br.com.hopp.disrupt21.to;
 import java.util.Date;
 
 public class TentativaTo {
+	
 	private int id;
 	private int idUsuario;
 	private int idQuiz;

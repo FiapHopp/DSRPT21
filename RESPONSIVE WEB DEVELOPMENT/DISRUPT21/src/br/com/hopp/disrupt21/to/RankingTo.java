@@ -7,8 +7,6 @@ public class RankingTo {
 	private int pontuacao;
 	
 	
-	
-	
 	public RankingTo() {
 		
 	}

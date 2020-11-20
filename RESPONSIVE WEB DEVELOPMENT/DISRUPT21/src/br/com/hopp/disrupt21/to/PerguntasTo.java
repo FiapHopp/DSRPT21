@@ -3,6 +3,7 @@ package br.com.hopp.disrupt21.to;
 public class PerguntasTo {
 	
 	private int id;
+	private String escolha;
 	private String pergunta;
 	private String resposta1;
 	private String resposta2;
@@ -10,7 +11,7 @@ public class PerguntasTo {
 	private String resposta4;
 	private String resposta5;
 	private String respostaCerta;
-	private String valorDaPergunta;
+	private int valorDaPergunta;
 	
 	
 	
@@ -18,7 +19,7 @@ public class PerguntasTo {
 	}
 
 	public PerguntasTo(int id, String pergunta, String resposta1, String resposta2, String resposta3, String resposta4,
-			String resposta5, String respostaCerta, String valorDaPergunta) {
+			String resposta5, String respostaCerta, int valorDaPergunta) {
 		
 		this.id = id;
 		this.pergunta = pergunta;
@@ -50,10 +51,10 @@ public class PerguntasTo {
 	public void setRespostaCerta(String respostaCerta) {
 		this.respostaCerta = respostaCerta;
 	}
-	public String getValorDaPergunta() {
+	public int getValorDaPergunta() {
 		return valorDaPergunta;
 	}
-	public void setValorDaPergunta(String valorDaPergunta) {
+	public void setValorDaPergunta(int valorDaPergunta) {
 		this.valorDaPergunta = valorDaPergunta;
 	}
 
@@ -95,6 +96,14 @@ public class PerguntasTo {
 
 	public void setResposta5(String resposta5) {
 		this.resposta5 = resposta5;
+	}
+
+	public String getEscolha() {
+		return escolha;
+	}
+
+	public void setEscolha(String escolha) {
+		this.escolha = escolha;
 	}
 	
 	
