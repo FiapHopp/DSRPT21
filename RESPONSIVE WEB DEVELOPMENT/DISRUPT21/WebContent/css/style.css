@@ -192,8 +192,8 @@ header p {
     text-align: justify;
 }
 
-.personagem-texto h1 {
-    text-align: center;
+h1 .personagem-texto {
+    text-align: left;
 }
 
 .personagem-imagem img {
@@ -237,7 +237,9 @@ header p {
     background-color: #fff;
     right: -4px;
 }
-
+.seta-bttf{
+  height: 10vh;
+}
 
 /* ======================================== CSS TIMELINE ========================================*/
 
@@ -247,6 +249,7 @@ header p {
 
 .timeline {
     position: relative;
+    background-color: #000;
 }
 
 .timeline::before {
