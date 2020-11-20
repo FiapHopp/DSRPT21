@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,36 +54,51 @@
                     </div>
 
                     <div id="quiz">
-                  
-                        <div class="question">
-                            <h3><span class="label label-warning" id="qid">1</span>
-                            <span id="question"> Para que ano Marty volta no tempo?</span>
-                            </h3>
-                        </div>
-                        <ul>
-                          <li>
-                            <input type="radio" id="f-option" name="selector" value="1">
-                            <label for="f-option" class="element-animation">1955</label>
-                            <div class="check"></div>
-                          </li>
-                          
-                          <li>
-                            <input type="radio" id="s-option" name="selector" value="2">
-                            <label for="s-option" class="element-animation">1960</label>
-                            <div class="check"><div class="inside"></div></div>
-                          </li>
-                          
-                          <li>
-                            <input type="radio" id="t-option" name="selector" value="3">
-                            <label for="t-option" class="element-animation">1959</label>
-                            <div class="check"><div class="inside"></div></div>
-                          </li>
-                          <li>
-                            <input type="radio" id="t-option" name="selector" value="3">
-                            <label for="t-option" class="element-animation">1954</label>
-                            <div class="check"><div class="inside"></div></div>
-                          </li>
-                        </ul>
+						<form action="">
+							<c:forEach var="list" items="${lista_quiz}" varStatus="id">
+								<div class="question">
+									<h3>
+										<span class="label label-warning" id="qid">${id.count})</span>
+										<span id="question">${list.pergunta}</span>
+									</h3>
+								</div>
+								<ul>
+									<li><input type="radio" id="f-option"
+										name="selector${id.count}" value="${list.resposta1}">
+										<label for="f-option" class="element-animation">${list.resposta1}</label>
+										<div class="check"></div></li>
+
+									<li><input type="radio" id="s-option"
+										name="selector${id.count}" value="${list.resposta2}">
+										<label for="s-option" class="element-animation">${list.resposta2}</label>
+										<div class="check">
+											<div class="inside"></div>
+										</div></li>
+
+									<li><input type="radio" id="t-option"
+										name="selector${id.count}" value="${list.resposta3}">
+										<label for="t-option" class="element-animation">${list.resposta3}</label>
+										<div class="check">
+											<div class="inside"></div>
+										</div></li>
+									<li><input type="radio" id="t-option"
+										name="selector${id.count}" value="${list.resposta4}">
+										<label for="t-option" class="element-animation">${list.resposta4}</label>
+										<div class="check">
+											<div class="inside"></div>
+										</div></li>
+									<li><input type="radio" id="t-option"
+										name="selector${id.count}" value="${list.resposta5}">
+										<label for="t-option" class="element-animation">${list.resposta5}</label>
+										<div class="check">
+											<div class="inside"></div>
+										</div></li>
+
+
+								</ul>
+							</c:forEach>
+							<button type="submit">Submeter</button>
+						</form>
                     </div>
                 </div>
                 <div class="text-muted">
