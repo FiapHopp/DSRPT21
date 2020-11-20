@@ -55,15 +55,15 @@
 	<div class="container-fluid">
 		<div class="erro-content">
 			<div class="erro-image">
-				<img src="./img/delorean-transparent-sign.png">
+				<img src="../img/delorean-transparent-sign.png">
 			</div>
 			<div class="erro-text">
 				<h2>OPS! ACHO QUE VOCÊ VIAJOU PARA O LUGAR ERRADO! :(</h2>
 				<p>${param.msgStatus}</p>
 				<p>
 					Sugerimos que você vá
-					<a href="../../index.jsp">
-						<img class="erro-icon" src="./img/btth-erro.png" />
+					<a href="./index.jsp">
+						<img class="erro-icon" src="../img/btth-erro.png" />
 					</a>
 				</p>
 			</div>

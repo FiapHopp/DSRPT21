@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!DOCTYPE html>
@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:100i,300,400,500,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
   <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css'>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FiapHopp/DSRPT21@main/RESPONSIVE%20WEB%20DEVELOPMENT/DISRUPT21/WebContent/css/style.css">    
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FiapHopp/DSRPT21@main/RESPONSIVE%20WEB%20DEVELOPMENT/DISRUPT21/WebContent/css/style.css">
 </head>
 
 <body class="bg-timeline">
@@ -23,7 +23,7 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item active">
-            <a class="nav-link" href="../../index.jsp">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="./index.jsp">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/DISRUPT21/personagens">Personagens</a>
@@ -47,21 +47,21 @@
 
   <section class="timeline">
     <div class="container-fluid">
-    
+
     <c:forEach var="timeline" items="${lista_linhaTempo}" varStatus="id">
       <div class="timeline-item">
         <div class="timeline-img"></div>
-        
+
         <div class="timeline-content js--fadeInLeft">
           <h2>${timeline.titulo}</h2>
           <div class="date">${timeline.anoAcontecimento}</div>
             <p>${timeline.resumo}</p>
             <button type="button" class="btn btn-warning" href="javascript:void(0)" data-toggle="modal" data-target="#modal_${id.count}">
 			  Saiba mais
-			</button>          
+			</button>
         </div>
       </div>
-      
+
       </c:forEach>
     </div>
   </section>
@@ -88,7 +88,7 @@
         ${timeline.acontecimento}
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>        
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
       </div>
     </div>
   </div>
