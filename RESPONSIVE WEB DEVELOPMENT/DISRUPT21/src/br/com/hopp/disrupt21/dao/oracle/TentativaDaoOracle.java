@@ -29,11 +29,11 @@ public class TentativaDaoOracle implements TentativaDao {
 		Connection conexao = ConnectionFactory.getConnection();
 		
 		PreparedStatement stmt = conexao.prepareStatement("INSERT INTO T_Tentativa(ID_TENTATIVA,FK_ID_USUARIO,FK_ID_QUIZ,pontos,dt_registro) "
-				+ "VALUES(T_TENTATIVA_SEQ.NEXTVAL,4,?,?,CURRENT_TIMESTAMP)");
+				+ "VALUES(T_TENTATIVA_SEQ.NEXTVAL,?,?,?,CURRENT_TIMESTAMP)");
 
-		
-		stmt.setInt(1, tentativaTo.getIdQuiz());
-		stmt.setInt(2, tentativaTo.getPontos());
+		stmt.setInt(1, tentativaTo.getIdUsuario());
+		stmt.setInt(2, tentativaTo.getIdQuiz());
+		stmt.setInt(3, tentativaTo.getPontos());
 		
 		stmt.executeUpdate();
 		stmt.close();

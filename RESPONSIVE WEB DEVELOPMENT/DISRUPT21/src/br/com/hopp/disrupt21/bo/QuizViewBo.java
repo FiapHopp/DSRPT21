@@ -23,4 +23,9 @@ public class QuizViewBo {
 		
 	}
 	
+	public List<QuizViewTo> pesquisarRandom() throws SQLException, Exception {
+		return viewDaoOracle.pesquisarRandom();
+		
+	}
+	
 }

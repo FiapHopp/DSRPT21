@@ -15,13 +15,17 @@ public class TentativaBo {
 		tentativaDaoOracle.cadastrar(tentativaTo);
 	}
 
-	public boolean assinalar(int idQuiz,String respostaUsuario) throws Exception {		
+	public boolean assinalar(int idQuiz,String respostaUsuario,int idUsuario) throws Exception {		
 		//RESGATAR QUIZ
 		QuizViewBo quizViewBo = new QuizViewBo();
 		List <QuizViewTo> lista = new ArrayList<QuizViewTo>();
 		lista = quizViewBo.pesquisar(idQuiz);
 		TentativaTo tentativaTo = new TentativaTo();
 		tentativaTo.setIdQuiz(idQuiz);
+		
+		if (idUsuario!=0) {
+			tentativaTo.setIdUsuario(idUsuario);
+		}
 		
 		
 		for (QuizViewTo item : lista) {

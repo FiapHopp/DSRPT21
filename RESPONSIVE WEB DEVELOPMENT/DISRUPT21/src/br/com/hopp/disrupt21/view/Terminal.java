@@ -2,6 +2,7 @@ package br.com.hopp.disrupt21.view;
 
 import java.sql.Date;
 
+import br.com.hopp.disrupt21.bo.QuizViewBo;
 import br.com.hopp.disrupt21.bo.TentativaBo;
 import br.com.hopp.disrupt21.to.TentativaTo;
 
@@ -76,6 +77,12 @@ public class Terminal {
 //		tentativaBo.assinalar(2, "Deloreon");
 //		
 //		System.out.println("PASSOU O METODO.CADASTRAR");
+		
+//		
+//		QuizViewBo quizViewBo = new QuizViewBo();
+//		
+//		System.out.println(quizViewBo.pesquisarRandom().size());
+		
 	}
 
 }
