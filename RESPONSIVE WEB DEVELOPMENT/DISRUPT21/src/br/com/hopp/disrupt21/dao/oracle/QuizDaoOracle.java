@@ -45,6 +45,10 @@ public class QuizDaoOracle implements QuizDao {
 		while (resultado.next()) {
 			lista.add(parse(resultado));			
 		}
+		
+		stmt.executeUpdate();
+		stmt.close();
+		conexao.close();
 		return lista;
 	}
 
@@ -61,7 +65,9 @@ public class QuizDaoOracle implements QuizDao {
 		stmt.setInt(1, id);
 		
 		ResultSet resultado = stmt.executeQuery();
-		
+		stmt.executeUpdate();
+		stmt.close();
+		conexao.close();
 		if(resultado.next())
 			return parse(resultado);
 		

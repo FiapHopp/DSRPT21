@@ -58,6 +58,9 @@ public class PersonagemDaoOracle implements PersonagemDao {
 		while (resultado.next()) {
 			lista.add(parse(resultado));			
 		}
+		stmt.executeUpdate();
+		stmt.close();
+		conexaumo.close();
 		return lista;
 	}
 
@@ -74,7 +77,9 @@ public class PersonagemDaoOracle implements PersonagemDao {
 		stmt.setInt(1, id);
 		
 		ResultSet resultado = stmt.executeQuery();
-		
+		stmt.executeUpdate();
+		stmt.close();
+		conexao.close();
 		if(resultado.next())
 			return parse(resultado);
 		

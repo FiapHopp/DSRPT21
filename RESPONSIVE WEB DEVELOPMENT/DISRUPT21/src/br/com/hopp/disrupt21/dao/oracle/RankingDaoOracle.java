@@ -36,6 +36,9 @@ public class RankingDaoOracle implements RankingDao {
 		while (resultado.next()) {
 			lista.add(parse(resultado));
 		}
+		stmt.executeUpdate();
+		stmt.close();
+		conexao.close();
 		return lista;
 	}
 
