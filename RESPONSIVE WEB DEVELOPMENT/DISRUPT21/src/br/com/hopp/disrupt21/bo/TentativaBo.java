@@ -1,5 +1,7 @@
 package br.com.hopp.disrupt21.bo;
 
+import java.util.Date;
+
 import br.com.hopp.disrupt21.to.PerguntasTo;
 import br.com.hopp.disrupt21.to.QuizViewTo;
 import br.com.hopp.disrupt21.to.TentativaTo;
@@ -29,15 +31,24 @@ public class TentativaBo {
 //	System.out.println("Sua pontuação:" + total);
 
 	public void assinalar() {
+		
 		QuizViewTo quizView = new QuizViewTo();
 		PerguntasTo perguntasTo= new PerguntasTo();	
-		TentativaTo TentativaTo = new TentativaTo();
-		perguntasTo.setEscolha("${userAnswer}");
+		TentativaTo tentativaTo = new TentativaTo();
+		Date dataRegistro = new Date(); 
+		
+		dataRegistro.getTime();
+		tentativaTo.setDataRegistro(dataRegistro);
+		perguntasTo.setEscolha("${userAnswer}"); //userAnswers virá do input da view (ela carregará a alternativa escolhida)
+
 		if (perguntasTo.getEscolha().equalsIgnoreCase(perguntasTo.getRespostaCerta())) {
-			
+			//FAZENDO O AUTO INCREMENTO (PEGANDO O VALOR DA PERGUNTA E SOMANDO COM A QUANTIDADE DE PONTOS QUE O USUARIO JÁ POSSUI)
+			int pontuacao = tentativaTo.getPontos();
+			pontuacao = pontuacao + perguntasTo.getValorDaPergunta();
+			tentativaTo.setPontos(pontuacao);
 		}
 		
-		
+		//		tentativaBo.registrar(tentativaTo);				
 		
 	}
 }

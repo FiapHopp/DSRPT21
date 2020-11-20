@@ -11,7 +11,7 @@ public class PerguntasTo {
 	private String resposta4;
 	private String resposta5;
 	private String respostaCerta;
-	private String valorDaPergunta;
+	private int valorDaPergunta;
 	
 	
 	
@@ -19,7 +19,7 @@ public class PerguntasTo {
 	}
 
 	public PerguntasTo(int id, String pergunta, String resposta1, String resposta2, String resposta3, String resposta4,
-			String resposta5, String respostaCerta, String valorDaPergunta) {
+			String resposta5, String respostaCerta, int valorDaPergunta) {
 		
 		this.id = id;
 		this.pergunta = pergunta;
@@ -51,10 +51,10 @@ public class PerguntasTo {
 	public void setRespostaCerta(String respostaCerta) {
 		this.respostaCerta = respostaCerta;
 	}
-	public String getValorDaPergunta() {
+	public int getValorDaPergunta() {
 		return valorDaPergunta;
 	}
-	public void setValorDaPergunta(String valorDaPergunta) {
+	public void setValorDaPergunta(int valorDaPergunta) {
 		this.valorDaPergunta = valorDaPergunta;
 	}
 
