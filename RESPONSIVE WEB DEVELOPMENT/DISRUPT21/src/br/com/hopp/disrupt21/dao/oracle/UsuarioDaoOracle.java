@@ -52,6 +52,8 @@ public class UsuarioDaoOracle implements UsuarioDao {
 		while (resultado.next()) {
 			lista.add(parse(resultado));			
 		}
+		stmt.close();
+		conexao.close();
 		return lista;
 	}
 
@@ -85,7 +87,8 @@ public class UsuarioDaoOracle implements UsuarioDao {
 		stmt.setString(2, usuarioTo.getEmail());
 		
 		stmt.executeUpdate();
-
+		stmt.close();
+		conexao.close();
 	}
 
 }
