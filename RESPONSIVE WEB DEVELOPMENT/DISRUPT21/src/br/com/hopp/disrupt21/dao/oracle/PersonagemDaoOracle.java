@@ -68,10 +68,10 @@ public class PersonagemDaoOracle implements PersonagemDao {
 	}
 
 	@Override
-	public PersonagemTo pesquisar(int idQuiz) throws SQLException, Exception {
-		PreparedStatement stmt = conexao.prepareStatement("Select * V_QUIZ where ID_QUIZ = ? ");
+	public PersonagemTo pesquisar(int id) throws SQLException, Exception {
+		PreparedStatement stmt = conexao.prepareStatement("");
 		
-		stmt.setInt(1, idQuiz);
+		stmt.setInt(1, id);
 		
 		ResultSet resultado = stmt.executeQuery();
 		

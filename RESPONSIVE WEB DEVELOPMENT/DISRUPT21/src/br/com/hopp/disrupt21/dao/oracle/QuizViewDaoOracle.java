@@ -50,7 +50,7 @@ public class QuizViewDaoOracle implements QuizViewDao {
 	public QuizViewTo pesquisar(int id) throws SQLException, Exception {
 		Connection conexao = ConnectionFactory.getConnection();
 		
-		PreparedStatement stmt = conexao.prepareStatement("");
+		PreparedStatement stmt = conexao.prepareStatement("Select * from V_QUIZ where ID_QUIZ = ?");
 		
 		stmt.setInt(1, id);
 		

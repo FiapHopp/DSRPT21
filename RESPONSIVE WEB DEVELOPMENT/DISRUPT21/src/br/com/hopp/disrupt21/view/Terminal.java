@@ -19,15 +19,15 @@ public class Terminal {
 //		List<LinhaDoTempoTo> listaLinhaTempo = linhaBo.lista();
 //		
 //		System.out.println("BO: " + listaLinhaTempo);
-
-		UsuarioTo to = new UsuarioTo();
-		
-		to.setEmail("teste@teste.com");
-		to.setNome("DaviEstagiario");
-		
-		UsuarioDaoOracle daoOracle =new UsuarioDaoOracle();
-		
-		daoOracle.cadastrar(to);
+//
+//		UsuarioTo to = new UsuarioTo();
+//		
+//		to.setEmail("teste@teste.com");
+//		to.setNome("DaviEstagiario");
+//		
+//		UsuarioDaoOracle daoOracle =new UsuarioDaoOracle();
+//		
+//		daoOracle.cadastrar(to);
 		
 	}
 
