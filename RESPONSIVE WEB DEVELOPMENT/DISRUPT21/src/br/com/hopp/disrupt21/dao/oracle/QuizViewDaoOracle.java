@@ -48,7 +48,7 @@ public class QuizViewDaoOracle implements QuizViewDao {
 	}
 
 	@Override
-	public QuizViewTo pesquisar(int id) throws SQLException, Exception {
+	public List<QuizViewTo> pesquisar(int id) throws SQLException, Exception {
 		Connection conexao = ConnectionFactory.getConnection();
 		
 		PreparedStatement stmt = conexao.prepareStatement("Select * from V_QUIZ where ID_QUIZ = ?");
@@ -57,10 +57,11 @@ public class QuizViewDaoOracle implements QuizViewDao {
 		
 		ResultSet resultado = stmt.executeQuery();
 		
-		if(resultado.next())
-			return parse(resultado);
-		
-			return null;
+		List<QuizViewTo> lista = new ArrayList<QuizViewTo>();
+		while (resultado.next()) {
+			lista.add(parse(resultado));			
+		}
+		return lista;
 	}
 
 	
