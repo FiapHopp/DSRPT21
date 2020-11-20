@@ -3,7 +3,9 @@ package br.com.hopp.disrupt21.view;
 import java.util.List;
 
 import br.com.hopp.disrupt21.bo.LinhaDoTempoBo;
+import br.com.hopp.disrupt21.dao.oracle.UsuarioDaoOracle;
 import br.com.hopp.disrupt21.to.LinhaDoTempoTo;
+import br.com.hopp.disrupt21.to.UsuarioTo;
 
 public class Terminal {
 
@@ -12,12 +14,21 @@ public class Terminal {
 		
 		//System.out.println(daoOracle.lista().size());
 		
-		LinhaDoTempoBo linhaBo = new LinhaDoTempoBo();
+//		LinhaDoTempoBo linhaBo = new LinhaDoTempoBo();
+//		
+//		List<LinhaDoTempoTo> listaLinhaTempo = linhaBo.lista();
+//		
+//		System.out.println("BO: " + listaLinhaTempo);
+
+		UsuarioTo to = new UsuarioTo();
 		
-		List<LinhaDoTempoTo> listaLinhaTempo = linhaBo.lista();
+		to.setEmail("teste@teste.com");
+		to.setNome("DaviEstagiario");
 		
-		System.out.println("BO: " + listaLinhaTempo);
-				
+		UsuarioDaoOracle daoOracle =new UsuarioDaoOracle();
+		
+		daoOracle.cadastrar(to);
+		
 	}
 
 }

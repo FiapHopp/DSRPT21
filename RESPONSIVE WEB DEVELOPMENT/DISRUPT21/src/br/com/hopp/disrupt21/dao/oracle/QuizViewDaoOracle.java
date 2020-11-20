@@ -46,5 +46,21 @@ public class QuizViewDaoOracle implements QuizViewDao {
 		return to;
 	}
 
+	@Override
+	public QuizViewTo pesquisar(int id) throws SQLException, Exception {
+		Connection conexao = ConnectionFactory.getConnection();
+		
+		PreparedStatement stmt = conexao.prepareStatement("");
+		
+		stmt.setInt(1, id);
+		
+		ResultSet resultado = stmt.executeQuery();
+		
+		if(resultado.next())
+			return parse(resultado);
+		
+			return null;
+	}
+
 	
 }
