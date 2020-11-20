@@ -12,4 +12,6 @@ public interface QuizViewDao {
 	List<QuizViewTo> lista() throws SQLException, Exception;
 	
 	List<QuizViewTo> pesquisar(int id)throws SQLException, Exception;
+	
+	List<QuizViewTo> pesquisarRandom()throws SQLException, Exception;
 }

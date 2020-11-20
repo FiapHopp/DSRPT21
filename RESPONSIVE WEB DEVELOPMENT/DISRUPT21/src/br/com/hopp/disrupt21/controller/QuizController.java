@@ -46,7 +46,7 @@ public class QuizController extends HttpServlet {
 		
 		QuizViewBo quizViewBo = new QuizViewBo();
 
-		QuizViewTo quiz = quizViewBo.pesquisar(1);
+		List<QuizViewTo> quiz = quizViewBo.pesquisarRandom();
 		System.out.println("RESULTADO: " + quiz);
 		
 		
