@@ -62,22 +62,15 @@ public class QuizViewDaoOracle implements QuizViewDao {
 		
 		ResultSet resultado = stmt.executeQuery();
 		
-<<<<<<< HEAD
 		List<QuizViewTo> lista = new ArrayList<QuizViewTo>();
+		
 		while (resultado.next()) {
 			lista.add(parse(resultado));			
-		}
-		return lista;
-=======
-		
-		if(resultado.next())
-			return parse(resultado);
-		
+		}		
 		stmt.close();
 		conexao.close();
+		return lista;
 		
-			return null;
->>>>>>> de3eb676ac02dc47a06e58f2a7b181daf0ac346c
 	}
 
 	

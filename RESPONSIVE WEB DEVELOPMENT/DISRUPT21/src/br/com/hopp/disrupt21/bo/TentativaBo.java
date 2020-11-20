@@ -1,54 +1,50 @@
 package br.com.hopp.disrupt21.bo;
 
-import java.util.Date;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
-import br.com.hopp.disrupt21.to.PerguntasTo;
+import br.com.hopp.disrupt21.dao.oracle.TentativaDaoOracle;
 import br.com.hopp.disrupt21.to.QuizViewTo;
 import br.com.hopp.disrupt21.to.TentativaTo;
 
 public class TentativaBo {
+	TentativaDaoOracle tentativaDaoOracle = new TentativaDaoOracle();
+	
+	public void cadastrar (TentativaTo tentativaTo) throws SQLException, Exception{
+		tentativaDaoOracle.cadastrar(tentativaTo);
+	}
 
-//	int a=1;
-//	int b=0;
-//	int c=0;
-//	int d=0;
-//	int e=0;
-//	
-//	int escolha=a;
-//	
-//	int respostaCerta= a;
-//	
-//	int total=0;
-//	int valor=5;
-//	
-//		if (escolha == respostaCerta) {
-//			System.out.println("Acertou");
-//			total = total + valor;
-//
-//		} else {
-//			System.out.println("Errou");
-//		}
-//	System.out.println("Sua pontuação:" + total);
-
-	public void assinalar() {
-		
-		QuizViewTo quizView = new QuizViewTo();
-		PerguntasTo perguntasTo= new PerguntasTo();	
+	public boolean assinalar(int idQuiz,String respostaUsuario) throws Exception {		
+		//RESGATAR QUIZ
+		QuizViewBo quizViewBo = new QuizViewBo();
+		List <QuizViewTo> lista = new ArrayList<QuizViewTo>();
+		lista = quizViewBo.pesquisar(idQuiz);
 		TentativaTo tentativaTo = new TentativaTo();
-		Date dataRegistro = new Date(); 
+		tentativaTo.setIdQuiz(idQuiz);
 		
-		dataRegistro.getTime();
-		tentativaTo.setDataRegistro(dataRegistro);
-		perguntasTo.setEscolha("${userAnswer}"); //userAnswers virá do input da view (ela carregará a alternativa escolhida)
-
-		if (perguntasTo.getEscolha().equalsIgnoreCase(perguntasTo.getRespostaCerta())) {
-			//FAZENDO O AUTO INCREMENTO (PEGANDO O VALOR DA PERGUNTA E SOMANDO COM A QUANTIDADE DE PONTOS QUE O USUARIO JÁ POSSUI)
-			int pontuacao = tentativaTo.getPontos();
-			pontuacao = pontuacao + perguntasTo.getValorDaPergunta();
-			tentativaTo.setPontos(pontuacao);
+		
+		for (QuizViewTo item : lista) {
+			if(respostaUsuario.equalsIgnoreCase(item.getRespostaCerta())) {
+				tentativaTo.setPontos(item.getValorPergunta());
+				System.out.println("Teste");
+				cadastrar(tentativaTo);
+				return true;
+			}
 		}
-		
-		//		tentativaBo.registrar(tentativaTo);				
-		
+		tentativaTo.setPontos(0);
+		cadastrar(tentativaTo);
+		return false;
 	}
 }
+
+
+//		lista.
+//		lista.forEach((quizViewItem)->{
+//			if(respostaUsuario.equalsIgnoreCase(quizViewItem.getRespostaCerta())) {
+//				System.out.println("Teste");
+//				//insert na tentativaTO
+//				resultado = true;
+//			}
+//		});
+//		

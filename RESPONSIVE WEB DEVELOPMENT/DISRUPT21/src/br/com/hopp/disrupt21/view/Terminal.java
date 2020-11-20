@@ -1,14 +1,9 @@
 package br.com.hopp.disrupt21.view;
 
-import java.util.List;
+import java.sql.Date;
 
-import br.com.hopp.disrupt21.bo.LinhaDoTempoBo;
-import br.com.hopp.disrupt21.bo.PersonagemBo;
-import br.com.hopp.disrupt21.bo.QuizBo;
-import br.com.hopp.disrupt21.bo.QuizViewBo;
-import br.com.hopp.disrupt21.dao.oracle.UsuarioDaoOracle;
-import br.com.hopp.disrupt21.to.LinhaDoTempoTo;
-import br.com.hopp.disrupt21.to.UsuarioTo;
+import br.com.hopp.disrupt21.bo.TentativaBo;
+import br.com.hopp.disrupt21.to.TentativaTo;
 
 public class Terminal {
 
@@ -68,6 +63,19 @@ public class Terminal {
 //		
 //		daoOracle.cadastrar(to);
 //		
+//		TentativaTo tentativaTo= new TentativaTo();
+//
+//
+//		
+//		TentativaBo tentativaBo = new TentativaBo();
+//		
+//		tentativaBo.assinalar(2, "3");
+//		tentativaBo.assinalar(2, "a");
+//		tentativaBo.assinalar(2, "1955");
+//		tentativaBo.assinalar(2, "davi");
+//		tentativaBo.assinalar(2, "Deloreon");
+//		
+//		System.out.println("PASSOU O METODO.CADASTRAR");
 	}
 
 }
