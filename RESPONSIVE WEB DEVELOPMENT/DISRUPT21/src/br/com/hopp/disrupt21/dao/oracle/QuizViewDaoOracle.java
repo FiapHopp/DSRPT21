@@ -41,8 +41,9 @@ public class QuizViewDaoOracle implements QuizViewDao {
 		String resposta3= resultado.getString("RESPOSTA3");
 		String resposta4= resultado.getString("RESPOSTA4");
 		String resposta5= resultado.getString("RESPOSTA5");
+		int idQuiz = resultado.getInt("ID_QUIZ");
 		
-		QuizViewTo to = new QuizViewTo(nomeTitulo, pergunta, valorPergunta, respostaCerta, resposta1, resposta2, resposta3, resposta4, resposta5);
+		QuizViewTo to = new QuizViewTo(nomeTitulo, pergunta, valorPergunta, respostaCerta, resposta1, resposta2, resposta3, resposta4, resposta5,idQuiz);
 		return to;
 	}
 
