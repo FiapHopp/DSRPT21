@@ -35,10 +35,10 @@
             <a class="nav-link" href="/DISRUPT21/quiz">Quiz</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../about/about.jsp">Sobre o Projeto</a>
+            <a class="nav-link" href="./pages/about/about.jsp">Sobre o Projeto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../game/game.jsp">Minigame</a>
+            <a class="nav-link" data-toggle="modal" data-target="#gameModal" href="../game/game.jsp">Minigame</a>
           </li>
         </ul>
       </div>
@@ -46,7 +46,6 @@
 </header>
 
 <!-----FIM DA NAVBAR / MENU SUPERIOR-->
-
   <div class="dropdown">
     <button style="width: 100vw;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Selecione o personagem
@@ -88,6 +87,26 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 <script src='https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js'></script>
-<script src="../../js/script.js"></script>
+<script src="./js/script.js"></script>
 </body>
+<!-- Modal Game -->
+<div class="modal fade" id="gameModal" tabindex="-1" role="dialog" aria-labelledby="gameModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="gameModalLabel">Time Travel</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+          </div>
+          <div class="modal-body">
+              Para acessar a tela desejada será necessário uma viagem ao passado. Deseja continuar?
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <a href="./pages/game/game.jsp"><button type="button" class="btn btn-success">Acessar</button></a>
+          </div>
+      </div>
+  </div>
+</div>
 </html>

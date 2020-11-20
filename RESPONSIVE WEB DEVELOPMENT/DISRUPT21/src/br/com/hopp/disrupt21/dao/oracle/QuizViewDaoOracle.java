@@ -27,6 +27,11 @@ public class QuizViewDaoOracle implements QuizViewDao {
 		while (resultado.next()) {
 			lista.add(parse(resultado));			
 		}
+		
+		
+		stmt.close();
+		conexao.close();
+		
 		return lista;
 	}
 
@@ -57,8 +62,12 @@ public class QuizViewDaoOracle implements QuizViewDao {
 		
 		ResultSet resultado = stmt.executeQuery();
 		
+		
 		if(resultado.next())
 			return parse(resultado);
+		
+		stmt.close();
+		conexao.close();
 		
 			return null;
 	}
