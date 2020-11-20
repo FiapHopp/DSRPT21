@@ -54,7 +54,7 @@
                     </div>
 
                     <div id="quiz">
-						<form action="">
+						<form action="/DISRUPT21/responder" method="post">
 							<c:forEach var="list" items="${lista_quiz}" varStatus="id">
 								<div class="question">
 									<h3>
@@ -62,6 +62,7 @@
 										<span id="question">${list.pergunta}</span>
 									</h3>
 								</div>
+								
 								<ul>
 									<li><input type="radio" id="f-option"
 										name="selector${id.count}" value="${list.resposta1}">
@@ -93,10 +94,10 @@
 										<div class="check">
 											<div class="inside"></div>
 										</div></li>
-
-
 								</ul>
+								
 							</c:forEach>
+							<input name="idQuiz" value="${id_quiz}" type="hidden">
 							<button type="submit">Submeter</button>
 						</form>
                     </div>
