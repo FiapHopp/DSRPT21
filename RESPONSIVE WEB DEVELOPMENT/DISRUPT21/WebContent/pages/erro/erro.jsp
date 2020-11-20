@@ -8,16 +8,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Erro</title>
-<link
-	href="https://fonts.googleapis.com/css?family=Roboto:100i,300,400,500,700"
-	rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Allura"
-	rel="stylesheet">
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
 	integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
 	crossorigin="anonymous">
-<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/gh/FiapHopp/DSRPT21@main/RESPONSIVE%20WEB%20DEVELOPMENT/DISRUPT21/WebContent/css/style.css">
 </head>
 
 <body class="body-erro">
@@ -54,17 +50,17 @@
 	<div class="container-fluid">
 		<div class="erro-content">
 			<div class="erro-image">
-				<img src="../img/delorean-transparent-sign.png">
+				<img src="./img/delorean-transparent-sign.png">
 			</div>
 			<div class="erro-text">
 				<h2>OPS! ACHO QUE VOCÊ VIAJOU PARA O LUGAR ERRADO! :(</h2>
 				<p>${param.msgStatus}</p>
 				<p>
-					Sugerimos que você vá 
+					Sugerimos que você vá
 					<a href="../../index.jsp">
-						<img class="erro-icon" src="../img/btth-erro.png" />
+						<img class="erro-icon" src="./img/btth-erro.png" />
 					</a>
-				</p>				
+				</p>
 			</div>
 		</div>
 	</div>
