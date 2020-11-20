@@ -9,24 +9,25 @@ import java.util.List;
 
 import br.com.hopp.disrupt21.connection.ConnectionManager;
 import br.com.hopp.disrupt21.dao.UsuarioDao;
+import br.com.hopp.disrupt21.factory.ConnectionFactory;
 import br.com.hopp.disrupt21.to.RankingTo;
 import br.com.hopp.disrupt21.to.UsuarioTo;
 
 public class UsuarioDaoOracle implements UsuarioDao {
 	
-	private Connection conexao;
+//	private Connection conexao;
 	
 //	public UsuarioDaoOracle () throws Exception {
 //		this.conexao= ConnectionManager.getInstance().getConnection();
 //
 //	}
 	
-	@Override
-	protected void finalize() throws Throwable {
-		this.conexao.close();
-		super.finalize();
-
-	}
+//	@Override
+//	protected void finalize() throws Throwable {
+//		this.conexao.close();
+//		super.finalize();
+//
+//	}
 	
 	private UsuarioTo parse(ResultSet resultado) throws SQLException{
 		String nome = resultado.getString("");
@@ -41,6 +42,8 @@ public class UsuarioDaoOracle implements UsuarioDao {
 	
 	@Override
 	public List<UsuarioTo> lista() throws SQLException, Exception {
+		Connection conexao = ConnectionFactory.getConnection();
+		
 		PreparedStatement stmt = conexao.prepareStatement("");
 		
 		ResultSet resultado = stmt.executeQuery();
@@ -73,14 +76,16 @@ public class UsuarioDaoOracle implements UsuarioDao {
 
 	@Override
 	public void cadastrar(UsuarioTo usuarioTo) throws SQLException, Exception {
-		PreparedStatement stmt = conexao.prepareStatement("Insert into T_USUARIO(ID_USUARIO,NM_USUARIO,EMAIL)"
-				+ "values(SEQ_USUARIO,?,?)");
+		Connection conexao = ConnectionFactory.getConnection();
 		
-		stmt.setString(1, usuarioTo.getEmail());
-		stmt.setString(2, usuarioTo.getNome());
+		PreparedStatement stmt = conexao.prepareStatement("Insert into T_USUARIO(ID_USUARIO,NM_USUARIO,EMAIL)"
+				+ "values(T_USUARIO_SEQ.NEXTVAL,?,?)");
+		
+		stmt.setString(1, usuarioTo.getNome());
+		stmt.setString(2, usuarioTo.getEmail());
 		
 		stmt.executeUpdate();
-		
+		System.out.println("JESUS CRISTO REINA");
 	}
 
 }
