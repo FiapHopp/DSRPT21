@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FiapHopp/DSRPT21@main/RESPONSIVE%20WEB%20DEVELOPMENT/DISRUPT21/WebContent/css/style.css">
 </head>
 <body>
-    
+
   <header class="text-center">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,11 +60,9 @@
             </div>
         </div>
         <div class="hoverboard col-xs-12 col-md-4 ">
-            <div class="sketchfab-embed-wrapper">
-                <iframe title="A 3D model" width="640" height="480" src="https://sketchfab.com/models/0bc7a20879884f37bf3cd901b4358414/embed?autospin=0.2&amp;autostart=1&amp;camera=0&amp;preload=1&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=0&amp;ui_watermark_link=1"
-                    frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-            </div>
-        </div>
+          <div class="sketchfab-embed-wrapper">
+              <iframe title="A 3D model" width="650" height="530" src="https://sketchfab.com/models/6cd288fa2f3c41b5a8f0b2ed2fa2df8f/embed?autostart=1&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+          </div>
     </div>
 
 

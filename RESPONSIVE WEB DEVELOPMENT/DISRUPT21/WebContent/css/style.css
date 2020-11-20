@@ -192,8 +192,8 @@ header p {
     text-align: justify;
 }
 
-.personagem-texto h1 {
-    text-align: center;
+h1 .personagem-texto {
+    text-align: left;
 }
 
 .personagem-imagem img {
@@ -237,7 +237,9 @@ header p {
     background-color: #fff;
     right: -4px;
 }
-
+.seta-bttf{
+  height: 10vh;
+}
 
 /* ======================================== CSS TIMELINE ========================================*/
 
@@ -247,6 +249,7 @@ header p {
 
 .timeline {
     position: relative;
+    background-color: #000;
 }
 
 .timeline::before {
@@ -410,7 +413,8 @@ blockquote {
 }
 
 .fiap-shape {
-    margin-top: 5vh;
+    margin-top: 15vh;
+    width: 15vw;
 }
 
 .hoverboard {
@@ -428,6 +432,10 @@ blockquote {
     font-size: 5rem;
     margin: 5vw 0 0 0;
 }
+.sketchfab-embed-wrapper{
+  margin-left: 65vw;
+}
+
 
 
 /* ======================================== CSS Game ========================================*/
@@ -510,7 +518,11 @@ div .erro-content {
     }
     /* ==================== About ==================== */
     .fiap-text {
-        font-size: 1.5rem;
+        font-size: 2rem;
+    }
+    .fiap-shape {
+        margin-top: 5vh;
+        width: 15vw;
     }
     /* ==================== Erro ==================== */
     .erro-content {
