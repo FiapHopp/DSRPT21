@@ -241,9 +241,6 @@ header p {
 
 /* ======================================== CSS TIMELINE ========================================*/
 
-.bg-timeline{
-	backgound-color: black !important;
-}
 
 .timeline {
     position: relative;

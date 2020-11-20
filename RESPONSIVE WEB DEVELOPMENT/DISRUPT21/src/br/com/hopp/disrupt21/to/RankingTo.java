@@ -10,16 +10,12 @@ public class RankingTo {
 	public RankingTo() {
 		
 	}
-	
-	
 
 	public RankingTo(String nomeUsuario, int pontuacao) {
 		
 		this.nomeUsuario = nomeUsuario;
 		this.pontuacao = pontuacao;
 	}
-
-
 
 	public RankingTo(int idRankign, String nomeUsuario, int pontuacao) {
 		
@@ -40,11 +36,11 @@ public class RankingTo {
 	public void setNomeUsuario(String nomeUsuario) {
 		this.nomeUsuario = nomeUsuario;
 	}
-	public int getPontuação() {
+	public int getPontuacao() {
 		return pontuacao;
 	}
-	public void setPontuação(int pontuação) {
-		this.pontuacao = pontuação;
+	public void setPontuacao(int pontuacao) {
+		this.pontuacao = pontuacao;
 	}
 	
 	

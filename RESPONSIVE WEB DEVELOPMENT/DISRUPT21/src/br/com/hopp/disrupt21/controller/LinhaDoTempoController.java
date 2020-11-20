@@ -51,7 +51,6 @@ public class LinhaDoTempoController extends HttpServlet {
 			
 		}else {
 			request.setAttribute("lista_linhaTempo", listaLinhaTempo);
-			System.out.println("ENTROU NO GET REQUEST");
 			request.getRequestDispatcher("/pages/timeline/timeline.jsp").forward(request, response);
 			
 		}

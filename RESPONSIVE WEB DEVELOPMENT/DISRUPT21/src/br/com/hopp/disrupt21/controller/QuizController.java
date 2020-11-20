@@ -46,19 +46,17 @@ public class QuizController extends HttpServlet {
 		
 		QuizViewBo quizViewBo = new QuizViewBo();
 
-		QuizViewTo quiz = quizViewBo.pesquisar(1);
-		System.out.println("RESULTADO: " + quiz);
+		List<QuizViewTo> quiz = quizViewBo.pesquisar(1);		
 		
+		if(quiz.isEmpty()) {
+			response.sendRedirect("/DISRUPT21/pages/erro/erro.jsp?msgStatus=Nenhuma pergunta encontrada.");
+			
+		}else {
+			request.setAttribute("lista_quiz", quiz);			
+			request.getRequestDispatcher("/pages/quiz/quiz.jsp").forward(request, response);
+			
+		}
 		
-//		if(quiz.isEmpty()) {
-//			response.sendRedirect("/DISRUPT21/pages/erro/erro.jsp?msgStatus=Nenhuma pergunta encontrada.");
-//			
-//		}else {
-//			request.setAttribute("lista_quiz", quiz);			
-//			request.getRequestDispatcher("/pages/quiz/quiz.jsp").forward(request, response);
-//			
-//		}
-//		
 		
 				
 	}

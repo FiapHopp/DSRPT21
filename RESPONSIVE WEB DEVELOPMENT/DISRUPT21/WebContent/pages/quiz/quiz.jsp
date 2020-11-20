@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,8 +11,8 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:100i,300,400,500,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
   <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css'>
-  <link rel="stylesheet" href="../../css/style.css">
-   <link rel="stylesheet" href="../../css/quiz.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FiapHopp/DSRPT21@main/RESPONSIVE%20WEB%20DEVELOPMENT/DISRUPT21/WebContent/css/style.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FiapHopp/DSRPT21@main/RESPONSIVE%20WEB%20DEVELOPMENT/DISRUPT21/WebContent/css/quiz.css">
 </head>
 
 <body>
@@ -43,73 +46,22 @@
     </nav>
 </header>
 <div class="container mt-5">        
-        <div class="row"><br><br>
-            <div class="col-sm-8 col-sm-offset-2">
-                <div class="loader">
-                    <div class="col-xs-3 col-xs-offset-5">
-                        <div id="loadbar" style="display: none;">
-                            <img src="https://8finatics.s3.amazonaws.com/static/reload_emi.gif" alt="Loading" class="center-block loanParamsLoader" style="">
-                        </div>
-                    </div>
-
-                    <div id="quiz">
-                  
-                        <div class="question">
-                            <h3><span class="label label-warning" id="qid">1</span>
-                            <span id="question"> Para que ano Marty volta no tempo?</span>
-                            </h3>
-                        </div>
-                        <ul>
-                          <li>
-                            <input type="radio" id="f-option" name="selector" value="1">
-                            <label for="f-option" class="element-animation">1955</label>
-                            <div class="check"></div>
-                          </li>
-                          
-                          <li>
-                            <input type="radio" id="s-option" name="selector" value="2">
-                            <label for="s-option" class="element-animation">1960</label>
-                            <div class="check"><div class="inside"></div></div>
-                          </li>
-                          
-                          <li>
-                            <input type="radio" id="t-option" name="selector" value="3">
-                            <label for="t-option" class="element-animation">1959</label>
-                            <div class="check"><div class="inside"></div></div>
-                          </li>
-                          <li>
-                            <input type="radio" id="t-option" name="selector" value="3">
-                            <label for="t-option" class="element-animation">1954</label>
-                            <div class="check"><div class="inside"></div></div>
-                          </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="text-muted">
-                    <span id="answer"></span>
-                </div>
+                                               
+	 <c:forEach var="quiz" items="${lista_quiz}" varStatus="id">
+		<div class="form-group">
+	    	<label for="exampleFormControlSelect1" class="text-light">${quiz.pergunta}</label>
+		    <select class="form-control" id="exampleFormControlSelect1">
+		      <option value="">Selecione a resposta</option>
+		      <option value="${quiz.resposta1}">${quiz.resposta1}</option>
+		      <option value="${quiz.resposta2}">${quiz.resposta2}</option>
+		      <option value="${quiz.resposta3}">${quiz.resposta3}</option>
+		      <option value="${quiz.resposta4}">${quiz.resposta4}</option>
+		      <option value="${quiz.resposta5}">${quiz.resposta5}</option>
+		    </select>
+		</div>	               
+	 </c:forEach>
                 
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-8 col-sm-offset-2">
-                <div id="result-of-question" class="pulse animated" style="display: none;">
-                    <span id="totalCorrect" class="pull-right"></span>
-                    <table class="table table-hover table-responsive" >
-                        <thead>
-                            <tr>
-                                <th>Question No.</th>
-                                <th>Our answer</th>
-                                <th>Your answer</th>
-                                <th>Result</th>
-                            </tr>
-                        </thead>
-                        <tbody id="quizResult"></tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
+</div>
 
  
   <!-- partial -->

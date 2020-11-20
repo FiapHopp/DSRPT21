@@ -20,7 +20,7 @@ public class QuizViewBo {
 		return viewDaoOracle.lista();
 	}
 	
-	public QuizViewTo pesquisar(int id) throws SQLException, Exception {
+	public List<QuizViewTo> pesquisar(int id) throws SQLException, Exception {
 		return viewDaoOracle.pesquisar(id);
 		
 	}
