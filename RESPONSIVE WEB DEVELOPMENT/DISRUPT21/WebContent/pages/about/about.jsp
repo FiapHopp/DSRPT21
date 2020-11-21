@@ -53,6 +53,7 @@
                     O desafio proposto pela FIAP teve como seu principal foco, como seu nome sugere a disrupção. Essa que é colocada em prática não apenas produzindo produtos diferentes do que se é visto, mas também se colocando em padrões diferentes do habitual, inovar
                     em suas próprias competências e habilidades se desafiando a criar algo tendo uma nova experiência. E foi assim que tivemos a ideia de homenagear a FIAP idealizando a sua premiação clássica trazendo ela para o tema proposto, dois clássicos
                     inovadores em um só.
+                    Como parte da proposta utilizamos de Machine Learning para realizar predições de aprovação do filme, que você pode conferir <a href="https://colab.research.google.com/drive/1EGgvIwTZwJdxbMY_f81JZXilFW_O5Lcs?usp=sharing">aqui</a>.
                 </p>
             </div>
             <div class=" col-2 justify-content-center">
