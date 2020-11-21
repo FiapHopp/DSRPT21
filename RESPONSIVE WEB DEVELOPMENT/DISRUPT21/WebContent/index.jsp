@@ -32,6 +32,9 @@
           <li class="nav-item">
             <a class="nav-link" href="/DISRUPT21/quiz">Quiz</a>
           </li>
+                    <li class="nav-item">
+            <a class="nav-link" href="/DISRUPT21/ranking">Ranking Quiz</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="./pages/about/about.jsp">Sobre o Projeto</a>
           </li>
