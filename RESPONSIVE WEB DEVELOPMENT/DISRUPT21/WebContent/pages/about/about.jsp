@@ -73,7 +73,6 @@
   <script src='https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js'></script>
   <script src="../../js/script.js"></script>
 
-
 </body>
 <div class="modal fade" id="gameModal" tabindex="-1" role="dialog" aria-labelledby="gameModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
