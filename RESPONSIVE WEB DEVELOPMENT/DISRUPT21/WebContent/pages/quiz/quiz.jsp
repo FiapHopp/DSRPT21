@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <header class="text-center mb-5">
+  <header class="text-center">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -22,27 +22,27 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item active">
-            <a class="nav-link" href="../../index.jsp">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="./index.jsp">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../personagens/personagens.jsp">Personagens</a>
+            <a class="nav-link" href="/DISRUPT21/personagens">Personagens</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../timeline/timeline.jsp">Linha do Tempo</a>
+            <a class="nav-link" href="/DISRUPT21/linhaDoTempo">Linha do Tempo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../quiz/quiz.jsp">Quiz</a>
+            <a class="nav-link" href="/DISRUPT21/quiz">Quiz</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../about/about.jsp">Sobre o Projeto</a>
+            <a class="nav-link" href="./pages/about/about.jsp">Sobre o Projeto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../game/game.jsp">Minigame</a>
+            <a class="nav-link" data-toggle="modal" data-target="#gameModal" href="./pages/game/game.jsp">Minigame</a>
           </li>
         </ul>
       </div>
     </nav>
-</header>
+  </header>
 <div class="container mt-5">
         <div class="row"><br><br>
             <div class="col-sm-8 col-sm-offset-2">

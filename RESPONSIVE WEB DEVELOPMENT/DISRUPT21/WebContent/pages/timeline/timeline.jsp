@@ -38,12 +38,12 @@
             <a class="nav-link" href="./pages/about/about.jsp">Sobre o Projeto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="modal" data-target="#gameModal"  href="../game/game.jsp">Minigame</a>
+            <a class="nav-link" data-toggle="modal" data-target="#gameModal" href="./pages/game/game.jsp">Minigame</a>
           </li>
         </ul>
       </div>
     </nav>
-</header>
+  </header>
 
   <section class="timeline">
     <div class="container-fluid">

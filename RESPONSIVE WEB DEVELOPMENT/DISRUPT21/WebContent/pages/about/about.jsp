@@ -20,7 +20,7 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item active">
-            <a class="nav-link" href="../../index.jsp">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="./index.jsp">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/DISRUPT21/personagens">Personagens</a>
@@ -32,15 +32,15 @@
             <a class="nav-link" href="/DISRUPT21/quiz">Quiz</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../about/about.jsp">Sobre o Projeto</a>
+            <a class="nav-link" href="./pages/about/about.jsp">Sobre o Projeto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="modal" data-target="#gameModal" href="../game/game.jsp">Minigame</a>
+            <a class="nav-link" data-toggle="modal" data-target="#gameModal" href="./pages/game/game.jsp">Minigame</a>
           </li>
         </ul>
       </div>
     </nav>
-</header>
+  </header>
 
 <div class="container-fluid">
         <div class="row justify-content-start">
