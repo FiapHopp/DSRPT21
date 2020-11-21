@@ -68,6 +68,9 @@ public class QuizController extends HttpServlet {
 	public void receberResposta(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
 		TentativaBo tentativaBo =  new TentativaBo();
+		
+		int qtdeAcertos = 0;
+		
 		String idQuiz = request.getParameter("idQuiz");
 		String resposta1 = request.getParameter("selector1");
 		String resposta2 = request.getParameter("selector2");
@@ -75,11 +78,21 @@ public class QuizController extends HttpServlet {
 		String resposta4 = request.getParameter("selector4");
 		String resposta5 = request.getParameter("selector5");
 		
-		tentativaBo.assinalar(Integer.parseInt(idQuiz), resposta1, 4);
-		tentativaBo.assinalar(Integer.parseInt(idQuiz), resposta2, 4);
-		tentativaBo.assinalar(Integer.parseInt(idQuiz), resposta3, 4);
-		tentativaBo.assinalar(Integer.parseInt(idQuiz), resposta4, 4);
-		tentativaBo.assinalar(Integer.parseInt(idQuiz), resposta5, 4); 
+		if(tentativaBo.assinalar(Integer.parseInt(idQuiz), resposta1, 4))
+			qtdeAcertos++;
+		if(tentativaBo.assinalar(Integer.parseInt(idQuiz), resposta2, 4))
+			qtdeAcertos++;
+		if(tentativaBo.assinalar(Integer.parseInt(idQuiz), resposta3, 4))
+			qtdeAcertos++;
+		if(tentativaBo.assinalar(Integer.parseInt(idQuiz), resposta4, 4))
+			qtdeAcertos++;
+		if(tentativaBo.assinalar(Integer.parseInt(idQuiz), resposta5, 4))
+			qtdeAcertos++;
+		
+		request.setAttribute("qtde_acertos", qtdeAcertos);
+		
+		request.getRequestDispatcher("/pages/quiz/resultado.jsp").forward(request, response);
+		
 	}
 	
 
