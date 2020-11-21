@@ -237,7 +237,7 @@ h1 .personagem-texto {
     background-color: #fff;
     right: -4px;
 }
-.seta-bttf{
+img .seta{
   height: 10vh;
 }
 
@@ -416,11 +416,14 @@ blockquote {
     margin-top: 15vh;
     width: 15vw;
 }
-
+img.fiap-shape{
+  width: 15vw;
+}
 .hoverboard {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 30vw;
 }
 
 .hoverboard-text {
