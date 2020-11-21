@@ -81,9 +81,9 @@
 					<div class="col-md-6 col-xs-6 text-light personagem-imagem">
 						<div class="image-slider1">
 							<div>
-								<img src="./img/personagens/${list.imgPass}" />
+								<img src="./img/personagens/${list.imgPres}" />
 							</div>
-							<img src="./img/personagens/${list.imgPres}" />
+							<img src="./img/personagens/${list.imgPass}" />
 						</div>
 						<div>
 							<img class="seta" src="./img/bttf-arrow.png">

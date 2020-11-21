@@ -9,8 +9,12 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:100i,300,400,500,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
   <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css'>
-  <link rel="stylesheet" href="../../css/style.css">
-   <link rel="stylesheet" href="../../css/quiz.css">
+  <link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/gh/FiapHopp/DSRPT21@main/RESPONSIVE%20WEB%20DEVELOPMENT/DISRUPT21/WebContent/css/style.css">
+	<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/gh/FiapHopp/DSRPT21@main/RESPONSIVE%20WEB%20DEVELOPMENT/DISRUPT21/WebContent/css/quiz.css">
+  <!--  <link rel="stylesheet" href="../../css/style.css">
+   <link rel="stylesheet" href="../../css/quiz.css">-->
 </head>
 
 <body>
@@ -98,6 +102,7 @@
 								
 							</c:forEach>
 							<input name="idQuiz" value="${id_quiz}" type="hidden">
+							<li class="nav-item">
 							<button type="submit">Submeter</button>
 						</form>
                     </div>
@@ -118,33 +123,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
   <script src='https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js'></script>
   <script src="../../js/script.js"></script>
-  <div class="modal fade" id="quizModal" tabindex="-1" role="dialog" aria-labelledby="quizModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="quizModalLabel">New message</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="form-group">
-              <label for="recipient-name" class="col-form-label">Recipient:</label>
-              <input type="text" class="form-control" id="nome-usuario">
-            </div>
-            <div class="form-group">
-              <label for="message-text" class="col-form-label">Message:</label>
-              <input type="text" class="form-control" id="email-usuario">
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Send message</button>
-        </div>
-      </div>
-    </div>
-  </div>
+
 </body>
 </html>
