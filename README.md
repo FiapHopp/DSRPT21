@@ -1,2 +1,2 @@
 # DSRPT21
-Repositório focado no Discorupt 21
+Repositório focado no evento DISRUPT21 organizado pela FIAP.
